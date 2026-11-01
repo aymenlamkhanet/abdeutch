@@ -5415,14 +5415,27 @@ img:not([loading="lazy"]) {
 }
 
 .hero-video-stage .hero-foreground {
-    position: relative !important;
-    z-index: 6 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: min(100%, 760px) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+  position: relative;
+  z-index: 21;
+  width: min(94%, 820px);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 24px;
+  background: rgba(7, 15, 28, 0.58) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  transition: opacity 180ms ease;
+  }
+
+.hero-video-stage.video-loading .hero-foreground {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.hero-video-stage.video-ready .hero-foreground {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .hero-video-stage .hero-content-container,

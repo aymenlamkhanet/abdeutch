@@ -577,8 +577,17 @@ statNumbers.forEach(stat => statsObserver.observe(stat));
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
-    initSlider();
-    handleScroll();
+  initSlider();
+
+  const heroStage = document.querySelector('.hero-video-stage');
+  const heroVideo = heroStage?.querySelector('.hero-background-video');
+  if (heroStage && heroVideo) {
+    const showHero = () => heroStage.classList.replace('video-loading', 'video-ready');
+    heroVideo.addEventListener('canplay', showHero, { once: true });
+    if (heroVideo.readyState >= 3) showHero();
+  }
+
+  handleScroll;
 });
 
 // ===== Keyboard Navigation =====
