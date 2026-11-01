@@ -5531,7 +5531,25 @@ img:not([loading="lazy"]) {
     backdrop-filter: blur(22px) saturate(1.2) !important;
 }
 
-.hero-video-stage.video-ready .slide-content {
+ .hero-video-stage .hero-loading-flag {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, var(--german-black) 0 33.33%, var(--german-red) 33.33% 66.66%, var(--german-gold) 66.66% 100%);
+    opacity: 1;
+    transition: opacity 320ms ease;
+}
+
+.hero-video-stage.video-ready .hero-loading-flag {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-video-stage.video-loading .hero-loading-flag {
+    opacity: 1;
+}
+
+ .hero-video-stage.video-ready .slide-content {
     background: rgba(0, 0, 0, 0.24) !important;
     -webkit-backdrop-filter: blur(16px) !important;
     backdrop-filter: blur(16px) !important;
