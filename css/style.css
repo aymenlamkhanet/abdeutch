@@ -5176,3 +5176,120 @@ img:not([loading="lazy"]) {
         border-top: 3px solid currentColor;
     }
 }
+
+/* =========================================
+   HERO BACKGROUND VIDEO
+========================================= */
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #000;
+}
+
+/* Video covers the entire hero section */
+.hero-video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Hide the old animated background */
+.hero-slider .animated-bg {
+    display: none;
+}
+
+/* Slider above the video */
+.hero-slider .slider-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove old slide backgrounds */
+.hero-slider .slide {
+    background: transparent !important;
+}
+
+/* Dark overlay over the video */
+.hero-slider .slide-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.30);
+    pointer-events: none;
+}
+
+/* Content above the overlay */
+.hero-slider .hero-content-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   GLASS / BLUR EFFECT - TEXT AREA ONLY
+========================================= */
+
+.hero-slider .slide-content {
+    position: relative;
+    isolation: isolate;
+    background: transparent !important;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+/* Blurred transparent background behind text */
+.hero-slider .slide-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    pointer-events: none;
+}
+
+/* Keep all text and content above the blur layer */
+.hero-slider .slide-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Text color */
+.hero-slider .slide-content h1,
+.hero-slider .slide-content p {
+    color: #fff;
+}
+
+/* Slider navigation above everything */
+.hero-slider .slider-controls {
+    position: relative;
+    z-index: 3;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-slider .slide-content {
+        padding: 20px;
+    }
+
+    .hero-slider .slide-content::before {
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+    }
+}
