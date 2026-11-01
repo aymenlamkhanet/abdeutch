@@ -1687,6 +1687,20 @@ textarea:focus-visible {
         width: 6px;
         height: 6px;
     }
+
+    /* Keep the video hero copy anchored above the playing video. */
+    .video-hero-slide .hero-content-container {
+        top: clamp(6.5rem, 18vh, 11rem) !important;
+        transform: translateX(-50%) !important;
+        justify-content: flex-start;
+    }
+
+    .video-hero-slide .slide-content {
+        background: rgba(5, 10, 18, 0.48);
+        border-color: rgba(255, 255, 255, 0.28);
+        backdrop-filter: blur(18px) saturate(1.15);
+        -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    }
     
     /* Reduce section padding in landscape */
     section {
