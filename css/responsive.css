@@ -1724,7 +1724,37 @@ textarea:focus-visible {
     .navbar-logo {
         height: 45px !important;
     }
-    
+
+    /* Keep the video hero copy visible above the video at all times. */
+    .video-hero-slide,
+    .video-hero-slide.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .video-hero-slide .hero-content-container,
+    .video-hero-slide .hero-foreground,
+    .video-hero-slide .hero-logo-wrapper,
+    .video-hero-slide .slide-content,
+    .video-hero-slide .slide-content h1,
+    .video-hero-slide .slide-content p,
+    .video-hero-slide .slide-buttons {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .video-hero-slide .hero-content-container {
+        z-index: 100 !important;
+    }
+
+    .video-hero-slide .slide-content {
+        flex-direction: column;
+    }
+
     /* Team member cards in landscape */
     .team-grid {
         grid-template-columns: repeat(3, 1fr);
