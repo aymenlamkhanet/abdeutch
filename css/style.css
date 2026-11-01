@@ -815,6 +815,29 @@ img {
     -webkit-backdrop-filter: none;
 }
 
+/* Persistent content: never let the video lifecycle hide the text layer. */
+.video-hero-slide .hero-content-container,
+.video-hero-slide .hero-foreground,
+.video-hero-slide .hero-logo-wrapper,
+.video-hero-slide .slide-content,
+.video-hero-slide .slide-content h1,
+.video-hero-slide .slide-content p,
+.video-hero-slide .slide-buttons {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.video-hero-slide .hero-content-container {
+    z-index: 20 !important;
+}
+
+.video-hero-slide .hero-foreground {
+    position: relative;
+    z-index: 21;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero-background-video {
         display: none;
