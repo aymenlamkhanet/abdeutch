@@ -5512,3 +5512,27 @@ img:not([loading="lazy"]) {
 .hero-video-stage .slider-dots {
     display: none !important;
 }
+
+/* Keep the loading gate last so the old slider visibility rules cannot flash the copy. */
+.hero-video-stage.video-loading .hero-content-container,
+.hero-video-stage.video-loading .hero-foreground,
+.hero-video-stage.video-loading .hero-foreground > * {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Readability panel: the video remains visible through a translucent, blurred surface. */
+.hero-video-stage.video-ready .hero-foreground {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: rgba(8, 16, 30, 0.56) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(1.2) !important;
+    backdrop-filter: blur(22px) saturate(1.2) !important;
+}
+
+.hero-video-stage.video-ready .slide-content {
+    background: rgba(0, 0, 0, 0.24) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    backdrop-filter: blur(16px) !important;
+}
