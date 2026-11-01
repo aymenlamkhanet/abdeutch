@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c41e3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b0000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background elements -->
+  <circle cx="400" cy="100" r="60" fill="#ffc107" opacity="0.2"/>
+  <circle cx="50" cy="350" r="40" fill="#c41e3a" opacity="0.1"/>
+  
+  <!-- Calendar -->
+  <rect x="100" y="80" width="180" height="160" rx="15" fill="white" stroke="#e9ecef" stroke-width="2"/>
+  <rect x="100" y="80" width="180" height="40" rx="15" fill="url(#grad1)"/>
+  <rect x="100" y="105" width="180" height="15" fill="url(#grad1)"/>
+  
+  <!-- Calendar header dots -->
+  <circle cx="130" cy="100" r="5" fill="white"/>
+  <circle cx="250" cy="100" r="5" fill="white"/>
+  
+  <!-- Calendar grid -->
+  <g fill="#1a1a2e" font-family="Arial" font-size="12" text-anchor="middle">
+    <text x="125" y="145">Lu</text>
+    <text x="155" y="145">Ma</text>
+    <text x="185" y="145">Me</text>
+    <text x="215" y="145">Je</text>
+    <text x="245" y="145">Ve</text>
+  </g>
+  
+  <g fill="#6c757d" font-family="Arial" font-size="11" text-anchor="middle">
+    <text x="125" y="170">1</text>
+    <text x="155" y="170">2</text>
+    <text x="185" y="170">3</text>
+    <text x="215" y="170">4</text>
+    <text x="245" y="170">5</text>
+    <text x="125" y="195">8</text>
+    <text x="155" y="195">9</text>
+    <text x="185" y="195">10</text>
+    <text x="215" y="195">11</text>
+    <text x="245" y="195">12</text>
+    <text x="125" y="220">15</text>
+    <text x="155" y="220">16</text>
+    <text x="185" y="220">17</text>
+    <text x="215" y="220">18</text>
+    <text x="245" y="220">19</text>
+  </g>
+  
+  <!-- Highlighted date -->
+  <circle cx="185" cy="192" r="14" fill="url(#grad1)"/>
+  <text x="185" y="196" fill="white" font-family="Arial" font-size="11" text-anchor="middle" font-weight="bold">10</text>
+  
+  <!-- Person with laptop -->
+  <ellipse cx="350" cy="320" rx="80" ry="15" fill="#1a1a2e" opacity="0.1"/>
+  
+  <!-- Desk -->
+  <rect x="290" y="250" width="120" height="60" rx="5" fill="#1a1a2e"/>
+  
+  <!-- Laptop -->
+  <rect x="310" y="220" width="80" height="50" rx="5" fill="#2d2d4a"/>
+  <rect x="315" y="225" width="70" height="40" rx="3" fill="#c41e3a" opacity="0.8"/>
+  <rect x="295" y="270" width="110" height="8" rx="2" fill="#3d3d5a"/>
+  
+  <!-- Person silhouette -->
+  <circle cx="350" cy="160" r="25" fill="#1a1a2e"/>
+  <path d="M310 320 Q310 200 350 190 Q390 200 390 320" fill="#1a1a2e"/>
+  
+  <!-- Notification bells -->
+  <g transform="translate(420, 150)">
+    <circle cx="0" cy="0" r="25" fill="#ffc107" opacity="0.2"/>
+    <path d="M-10 5 L0 -15 L10 5 L-10 5" fill="#ffc107"/>
+    <rect x="-10" y="5" width="20" height="3" rx="1" fill="#ffc107"/>
+    <circle cx="0" cy="10" r="3" fill="#ffc107"/>
+  </g>
+  
+  <!-- Chat bubbles -->
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="60" height="30" rx="15" fill="url(#grad1)" opacity="0.8"/>
+    <circle cx="15" cy="15" r="3" fill="white"/>
+    <circle cx="30" cy="15" r="3" fill="white"/>
+    <circle cx="45" cy="15" r="3" fill="white"/>
+  </g>
+  
+  <!-- Stars/sparkles -->
+  <g fill="#ffc107">
+    <polygon points="450,50 452,56 458,56 453,60 455,66 450,62 445,66 447,60 442,56 448,56" />
+    <polygon points="60,100 61,104 65,104 62,107 63,111 60,108 57,111 58,107 55,104 59,104" transform="scale(0.7)"/>
+  </g>
+  
+  <!-- German flag colors accent -->
+  <rect x="20" y="50" width="8" height="20" fill="#000000"/>
+  <rect x="20" y="70" width="8" height="20" fill="#DD0000"/>
+  <rect x="20" y="90" width="8" height="20" fill="#FFCC00"/>
+</svg>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="#DD0000" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Notre équipe de professeurs qualifiés - Abdeutsch Center.">
+    <title>Abdeutsch - Notre Équipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/Logo%20Abdeutsch%20PNG.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center" class="navbar-logo"><span class="logo-text notranslate" translate="no">Abdeutsch Center</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Qui sommes-nous ? <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="team.html">Notre Équipe</a></li>
+                        <li><a href="certification.html">Certification & Légalité</a></li>
+                        <li><a href="success-stories.html">Nos Réussites</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Nos Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses.html">Cours de Langue</a></li>
+                        <li><a href="exams.html">Examens Internationaux</a></li>
+                        <li><a href="packs.html">Nos Packs</a></li>
+                        <li><a href="formations.html">Nos Formations</a></li>
+                        <li><a href="test-niveau.html">Test de Niveau</a></li>
+                    </ul>
+                </li>
+                <li><a href="events.html" class="nav-link">Événements</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="contact.html" class="btn btn-primary">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="german-flag-line"></div>
+            <h1>Notre Équipe</h1>
+            <p class="page-subtitle">Des professionnels passionnés à votre service</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-page-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Experts</span>
+                <h2>Rencontrez notre équipe pédagogique</h2>
+                <p>Des professeurs qualifiés et expérimentés pour vous accompagner</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member-card">
+                    <div class="member-image">
+                        <div class="member-avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Abdellatif El Baraka</h3>
+                        <span class="member-role">Directeur & Fondateur Enseignant de langue allemande</span>
+                        <p class="member-description">
+                            <span class="short-text"> titulaire d'un Bachelor</span>
+                            <span class="full-text" style="display: none;"> en linguistique germanique, avec plus de 9 ans d'expérience dans l'enseignement de l'allemand. Fondateur du centre de formation linguistique Abdeutsch, engagé dans l'accompagnement académique et professionnel des apprenants vers l'excellence linguistique et l'intégration internationale.</span>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Plus</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card">
+                    <div class="member-image">
+                        <div class="member-avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Mohamed Brahimi</h3>
+                        <span class="member-role">Professeur de langue allemande (A1–B1)</span>
+                        <p class="member-description">
+                            <span class="short-text">Enseignant d'allemand spécialisé dans les</span>
+                            <span class="full-text" style="display: none;"> niveaux A1 à B1, assurant des cours en présentiel et en ligne. Reconnu pour sa pédagogie claire, structurée et adaptée aux débutants.</span>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Plus</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member-card">
+                    <div class="member-image">
+                        <div class="member-avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anna Schmidt</h3>
+                        <span class="member-role">Professeure d'allemand – Native (Tübingen)</span>
+                        <p class="member-description">
+                            <span class="short-text">Enseignante native allemande, originaire de</span>
+                            <span class="full-text" style="display: none;"> Berlin, spécialisée dans l'enseignement en ligne des niveaux B2 à C1. Formations ciblées pour les médecins, infirmiers et professionnels de santé, avec un accent particulier sur la communication professionnelle et médicale.</span>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Plus</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member-card">
+                    <div class="member-image">
+                        <div class="member-avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Zahira Sakhoune</h3>
+                        <span class="member-role">Assistante Administrative</span>
+                        <p class="member-description">
+                            <span class="short-text">Responsable de l'accueil et du</span>
+                            <span class="full-text" style="display: none;"> suivi administratif. À votre écoute pour toutes vos questions, inscriptions, et démarches administratives, avec professionnalisme et disponibilité.</span>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Plus</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Our Team Section -->
+    <section class="why-team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Atouts</span>
+                <h2>Pourquoi choisir notre équipe?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Professeurs Qualifiés</h3>
+                    <p>Tous nos enseignants sont certifiés et ont une expérience significative dans l'enseignement de l'allemand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3>Natifs Allemands</h3>
+                    <p>Une partie de notre équipe est native allemande, garantissant un apprentissage authentique de la langue.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion & Dévouement</h3>
+                    <p>Chaque membre de l'équipe est passionné par l'enseignement et dévoué à la réussite des étudiants.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Accompagnement Personnalisé</h3>
+                    <p>Un suivi individualisé pour chaque étudiant, de l'inscription jusqu'à l'atteinte des objectifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="german-flag-line"></div>
+                <h2>Rejoignez notre famille d'apprenants</h2>
+                <p>Commencez votre parcours avec notre équipe d'experts dès aujourd'hui</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Contactez-nous</a>
+                    <a href="https://wa.link/r6rnlq" target="_blank" class="btn btn-outline btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <h3 class="footer-title">Abdeutsch Center</h3>
+                        <p>Votre partenaire de confiance pour l'apprentissage de l'allemand et l'accompagnement vers une carrière en Allemagne.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Liens Rapides</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="services.html">Nos Services</a></li>
+                            <li><a href="courses.html">Nos Cours</a></li>
+                            <li><a href="exams.html">Examens</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li><a href="courses.html">Cours d'Allemand</a></li>
+                            <li><a href="exams.html">Préparation Examens</a></li>
+                            <li><a href="packs.html">Accompagnement Visa</a></li>
+                            <li><a href="formations.html">Formation Professionnelle</a></li>
+                            <li><a href="contact.html">Orientation Universitaire</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="tel:+212772558126"><i class="fas fa-phone"></i> +212 7 72 55 81 26</a></li>
+                            <li><a href="mailto:Contact@abdeutschzentrum.de"><i class="fas fa-envelope"></i> Contact@abdeutschzentrum.de</a></li>
+                            <li><a href="mailto:abdeutschzentrum@gmail.com"><i class="fas fa-envelope"></i> abdeutschzentrum@gmail.com</a></li>
+                            <li><a href="https://maps.app.goo.gl/kVRK6V2NgpuHk8GN9" target="_blank"><i class="fas fa-map-marker-alt"></i> Voir sur Maps</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/Abdeutschcoach/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/abd.eutsch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/r6rnlq" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-bottom-right">
+                    <p>Copyright 2026 © Abdeutsch Center. Tous droits réservés.</p>
+                    <span class="footer-separator">|</span>
+                    <a href="#">Mentions légales</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.link/r6rnlq" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Language Translator Button -->
+    <div class="translate-float">
+        <div class="translate-btn">
+            <i class="fas fa-globe"></i>
+        </div>
+        <div class="translate-menu">
+            <a href="#" class="translate-option" data-lang="fr" translate="no"><span class="lang-abbr">FR</span> Français</a>
+            <a href="#" class="translate-option" data-lang="en" translate="no"><span class="lang-abbr">EN</span> English</a>
+            <a href="#" class="translate-option" data-lang="de" translate="no"><span class="lang-abbr">DE</span> Deutsch</a>
+            <a href="#" class="translate-option" data-lang="ar" translate="no"><span class="lang-abbr">AR</span> العربية</a>
+        </div>
+    </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'fr,en,de,ar',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script src="js/pages.js"></script>
+    <script>
+        function toggleDescription(button) {
+            const description = button.closest('.member-description');
+            const card = button.closest('.team-member-card');
+            const fullText = description.querySelector('.full-text');
+            const shortText = description.querySelector('.short-text');
+            
+            // Si on veut ouvrir cette description
+            if (fullText.style.display === 'none') {
+                // Fermer toutes les autres descriptions d'abord
+                document.querySelectorAll('.member-description').forEach(desc => {
+                    const otherFullText = desc.querySelector('.full-text');
+                    const otherBtn = desc.querySelector('.read-more-btn');
+                    const otherCard = desc.closest('.team-member-card');
+                    if (otherFullText && otherFullText.style.display !== 'none') {
+                        otherFullText.style.display = 'none';
+                        otherBtn.textContent = 'Plus';
+                        if (otherCard) otherCard.classList.remove('active');
+                    }
+                });
+                
+                // Ouvrir celle-ci
+                fullText.style.display = 'inline';
+                shortText.style.display = 'inline';
+                button.textContent = 'Moins';
+                if (card) card.classList.add('active');
+            } else {
+                // Fermer celle-ci
+                fullText.style.display = 'none';
+                button.textContent = 'Plus';
+                if (card) card.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

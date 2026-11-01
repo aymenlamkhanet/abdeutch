@@ -1,0 +1,91 @@
+/* Placeholder styles - Replace with actual images */
+/* This file provides fallback backgrounds for missing images */
+
+/* Hero slides - Using gradients as placeholders */
+.slide:nth-child(1) {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+}
+
+.slide:nth-child(2) {
+    background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #16213e 100%) !important;
+}
+
+.slide:nth-child(3) {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 50%, #1a1a2e 100%) !important;
+}
+
+.slide:nth-child(4) {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%) !important;
+}
+
+/* About image placeholder */
+.about-image img {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    min-height: 400px;
+    object-fit: cover;
+}
+
+/* Student/testimonial image placeholders */
+.testimonial-author img {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    object-fit: cover;
+}
+
+/* Partner logos placeholder */
+.partner-logo img,
+.footer-partners img {
+    background: rgba(196, 30, 58, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 120px;
+    min-height: 50px;
+}
+
+/* Exam logos placeholder */
+.exam-logo img {
+    background: transparent;
+    padding: 10px;
+    min-height: 60px;
+}
+
+/* Team member images */
+.team-image img {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+/* Service detail images */
+.service-detail-image img {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    min-height: 300px;
+}
+
+/* About intro image */
+.about-intro-image img {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    min-height: 400px;
+}
+
+/* Generic image placeholders */
+img[src*="placeholder"],
+img:not([src]),
+img[src=""] {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide broken images gracefully */
+img {
+    position: relative;
+}
+
+img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}

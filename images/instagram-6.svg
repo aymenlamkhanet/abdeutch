@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#1a1a2e"/>
+  <polygon points="200,80 260,180 340,180 280,240 300,340 200,280 100,340 120,240 60,180 140,180" fill="#FFCC00"/>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">🇩🇪</text>
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Rejoignez-nous!</text>
+  <circle cx="80" cy="80" r="20" fill="#DD0000" opacity="0.6"/>
+  <circle cx="320" cy="80" r="20" fill="#DD0000" opacity="0.6"/>
+</svg>

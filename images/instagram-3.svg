@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#FFCC00"/>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">Préparation</text>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">TestDaF</text>
+  <rect x="100" y="280" width="200" height="60" rx="10" fill="#DD0000"/>
+  <text x="200" y="318" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Réussissez!</text>
+  <circle cx="200" cy="100" r="45" fill="#000000" opacity="0.2"/>
+  <text x="200" y="115" font-family="Arial, sans-serif" font-size="35" text-anchor="middle">✨</text>
+</svg>

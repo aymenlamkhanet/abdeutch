@@ -1,0 +1,3830 @@
+/* ===== Dark Mode Support ===== */
+/* Automatically detects browser/OS dark mode preference */
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Override color scheme */
+        color-scheme: dark;
+        
+        /* German Flag Colors - Keep brand colors */
+        --german-black: #000000;
+        --german-red: #DD0000;
+        --german-gold: #FFCC00;
+        
+        /* Adjusted colors for dark mode */
+        --primary-color: #FF3333;
+        --primary-dark: #DD0000;
+        --secondary-color: #1a1a2e;
+        --accent-color: #FFCC00;
+        
+        /* Text colors for dark mode */
+        --text-dark: #e0e0e0;
+        --text-light: #b0b0b0;
+        --text-white: #ffffff;
+        --text-muted: #888888;
+        
+        /* Background colors for dark mode */
+        --bg-light: #1a1a1a;
+        --bg-dark: #0d0d0d;
+        --bg-card: #242424;
+        --bg-card-hover: #2d2d2d;
+        --bg-section-alt: #1e1e1e;
+        
+        /* Border colors */
+        --border-color: #333333;
+        --border-light: #444444;
+        
+        /* Shadows for dark mode */
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+        --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ===== Global Styles ===== */
+    html, body {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        color-scheme: dark !important;
+    }
+
+    /* ===== Navigation ===== */
+    .navbar,
+    .nav-menu {
+        background: rgba(0, 0, 0, 0.98) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.98) !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-link {
+        color: #ffffff !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--german-gold) !important;
+    }
+
+    .dropdown-content {
+        background: #000000 !important;
+        border: none !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .dropdown-content a {
+        color: #ffffff !important;
+        border-bottom: none !important;
+        background: #000000 !important;
+    }
+
+    .dropdown-content a:hover {
+        background: #000000 !important;
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== Mobile Menu ===== */
+    .mobile-menu,
+    .sidebar {
+        background: #000000 !important;
+    }
+
+    .sidebar-nav a,
+    .mobile-nav-link {
+        color: #ffffff !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .sidebar-nav a:hover,
+    .mobile-nav-link:hover {
+        background: #1a1a1a !important;
+        color: var(--german-gold) !important;
+    }
+
+    .hamburger span {
+        background-color: #ffffff !important;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-slider {
+        background: #000000 !important;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        color: #ffffff !important;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-content p {
+        color: #ffffff !important;
+    }
+
+    /* ===== Page Headers ===== */
+    .page-header {
+        background: #000000 !important;
+    }
+
+    .page-header h1 {
+        color: #ffffff !important;
+    }
+
+    .page-header .breadcrumb a {
+        color: #cccccc !important;
+    }
+
+    .page-header .breadcrumb span {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== HIDE FLOATING ICONS IN DARK MODE ===== */
+    .floating-icons-bg,
+    .floating-icons-bg i,
+    .floating-icons,
+    .floating-icon {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    /* ===== All Sections Black Background ===== */
+    section,
+    .about-section,
+    .services-section,
+    .courses-section,
+    .courses-section-new,
+    .events-section,
+    .events-preview-section,
+    .contact-section,
+    .team-section,
+    .success-stories-section,
+    .formations-section,
+    .exams-section,
+    .packs-section,
+    .testimonials-section,
+    .partners-section,
+    .certifications-section,
+    .instagram-section,
+    .quick-links,
+    .links-section,
+    .bg-light,
+    .exams-cards-section,
+    .success-rate-section,
+    .event-types-section,
+    .events-videos-section {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        background-image: none !important;
+    }
+
+    /* ===== Landing Page Specific Sections ===== */
+    /* About section with stats - BLACK background, WHITE text */
+    .about-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+    
+    .about-section .about-stats {
+        background: rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .about-section .about-grid {
+        background: transparent !important;
+    }
+
+    .about-section .about-content {
+        background: transparent !important;
+    }
+
+    .about-section .about-content h2 {
+        color: #ffffff !important;
+    }
+
+    .about-section .about-content p {
+        color: #ffffff !important;
+    }
+
+    .about-section .about-content strong {
+        color: #ffffff !important;
+    }
+
+    .about-section .about-content span,
+    .about-section .about-features span {
+        color: #ffffff !important;
+    }
+
+    .about-section .section-tag {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+    }
+
+    .about-section .stat {
+        background: transparent !important;
+    }
+
+    .about-section .stat-number {
+        color: var(--german-red) !important;
+    }
+
+    .about-section .stat-label {
+        color: #ffffff !important;
+    }
+
+    .about-section .feature {
+        color: #ffffff !important;
+    }
+
+    .about-section .feature span {
+        color: #ffffff !important;
+    }
+
+    .about-section .feature i {
+        color: var(--german-red) !important;
+    }
+
+    /* Services section */
+    .services-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .service-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .service-card h3 {
+        color: #ffffff !important;
+    }
+
+    .service-card:hover h3 {
+        color: var(--german-red) !important;
+    }
+
+    .service-card p {
+        color: #ffffff !important;
+    }
+
+    .service-link {
+        color: var(--german-red) !important;
+    }
+
+    /* Exams section */
+    .exams-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .exam-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .exam-card h3 {
+        color: #ffffff !important;
+    }
+
+    .exam-card:hover h3 {
+        color: var(--german-red) !important;
+    }
+
+    .exam-card p {
+        color: #ffffff !important;
+    }
+
+    .exam-logo {
+        background: #0a0a0a !important;
+    }
+
+    .exam-levels span {
+        background: #111111 !important;
+        color: #ffffff !important;
+        border: 1px solid #333 !important;
+    }
+
+    /* Events preview section */
+    .events-preview-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .event-preview-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-preview-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-preview-card:hover h3 {
+        color: var(--german-red) !important;
+    }
+
+    .event-preview-card p {
+        color: #ffffff !important;
+    }
+
+    .event-preview-icon {
+        background: var(--german-red) !important;
+    }
+
+    .event-preview-icon i {
+        color: #ffffff !important;
+    }
+
+    /* Partners section */
+    .partners-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .partner-logo {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    /* Courses section */
+    .courses-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .course-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .course-card h3 {
+        color: #ffffff !important;
+    }
+
+    .course-card:hover h3 {
+        color: var(--german-red) !important;
+    }
+
+    /* Contact section - VISIBLE with proper styling */
+    .contact-section {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    .contact-section .contact-grid {
+        background: transparent !important;
+    }
+
+    .contact-section .contact-info {
+        background: transparent !important;
+    }
+
+    .contact-section .contact-info h2 {
+        color: #ffffff !important;
+    }
+
+    .contact-section .contact-info p {
+        color: #ffffff !important;
+    }
+
+    .contact-section .section-tag {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+    }
+
+    .contact-section .contact-details {
+        background: transparent !important;
+    }
+
+    .contact-section .contact-item h4 {
+        color: #ffffff !important;
+    }
+
+    .contact-section .contact-item p,
+    .contact-section .contact-item a {
+        color: #ffffff !important;
+    }
+
+    .contact-section .contact-icon {
+        background: var(--german-red) !important;
+    }
+
+    .contact-section .contact-icon i {
+        color: #ffffff !important;
+    }
+
+    .contact-section .social-links {
+        background: transparent !important;
+    }
+
+    .contact-section .social-link {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .contact-section .social-link:hover {
+        background: var(--german-red) !important;
+        border-color: var(--german-red) !important;
+    }
+
+    .contact-section .contact-form-wrapper {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .contact-section .contact-form {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .contact-section .contact-form h3 {
+        color: #ffffff !important;
+    }
+
+    .contact-section .contact-form input,
+    .contact-section .contact-form textarea,
+    .contact-section .contact-form select {
+        background: #000000 !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .contact-section .contact-form input::placeholder,
+    .contact-section .contact-form textarea::placeholder {
+        color: #888888 !important;
+    }
+
+    .contact-section .contact-form select option {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== All Text White ===== */
+    p, span, li, td, th, label, 
+    .text-dark, .text-muted,
+    .card-text, .card-description,
+    .section-description, .section-subtitle,
+    .about-text, .service-text, .course-text,
+    .event-text, .team-bio, .story-description,
+    .contact-text, .form-text,
+    .events-intro-content p,
+    .events-intro-content h2,
+    .event-feature span,
+    .section-tag,
+    .events-features span,
+    .upcoming-events-section p,
+    .about-content p,
+    .services-content p,
+    .contact-content p,
+    .success-stories p,
+    .page-content p,
+    .feature-text,
+    .intro-text,
+    .description {
+        color: #ffffff !important;
+    }
+
+    /* ===== Section Titles ===== */
+    .section-title,
+    .section-header h2,
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    .section-subtitle,
+    .section-description {
+        color: #b0b0b0 !important;
+    }
+
+    .section-tag {
+        background: rgba(221, 0, 0, 0.2) !important;
+        color: var(--german-red) !important;
+    }
+
+    /* ===== Cards ===== */
+    .card,
+    .service-card,
+    .course-card,
+    .exam-card,
+    .exam-card-new,
+    .team-card,
+    .story-card,
+    .event-card,
+    .pack-card,
+    .formation-card,
+    .info-card,
+    .feature-card,
+    .stat-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .card:hover,
+    .service-card:hover,
+    .course-card:hover,
+    .exam-card:hover,
+    .exam-card-new:hover,
+    .team-card:hover,
+    .story-card:hover,
+    .event-card:hover,
+    .pack-card:hover,
+    .formation-card:hover {
+        background: #111111 !important;
+        border-color: var(--german-red) !important;
+        box-shadow: 0 8px 30px rgba(221, 0, 0, 0.3) !important;
+    }
+
+    .card-title,
+    .service-card h3,
+    .course-card h3,
+    .exam-card h3,
+    .exam-card-new h3,
+    .team-card h3,
+    .story-card h3,
+    .event-card h3,
+    .pack-card h3,
+    .formation-card h3 {
+        color: #ffffff !important;
+    }
+
+    .card-text,
+    .card-description,
+    .service-card p,
+    .course-card p,
+    .exam-card p,
+    .exam-card-content p,
+    .team-card p,
+    .story-card p,
+    .event-card p,
+    .pack-card p,
+    .formation-card p {
+        color: #ffffff !important;
+    }
+
+    /* Card logo backgrounds */
+    .exam-card-logo,
+    .card-logo-wrapper {
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%) !important;
+    }
+
+    /* ===== Exam Cards ===== */
+    .exam-level {
+        background: rgba(255, 204, 0, 0.15) !important;
+        color: var(--german-gold) !important;
+    }
+
+    .exam-features li {
+        color: #ffffff !important;
+    }
+
+    /* ===== Course Cards ===== */
+    .course-level-badge {
+        background: rgba(221, 0, 0, 0.2) !important;
+    }
+
+    .course-info {
+        border-top: 1px solid #222 !important;
+    }
+
+    .course-duration,
+    .course-schedule,
+    .course-price {
+        color: #ffffff !important;
+    }
+
+    /* ===== Pack Cards ===== */
+    .pack-header {
+        background: linear-gradient(135deg, #DD0000 0%, #990000 100%) !important;
+    }
+
+    .pack-features li {
+        color: #ffffff !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .pack-price {
+        color: #ffffff !important;
+    }
+
+    .pack-card.featured {
+        border-color: var(--german-gold) !important;
+    }
+
+    /* ===== Tables ===== */
+    table,
+    .pricing-table,
+    .schedule-table,
+    .comparison-table {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    th {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border-bottom: 2px solid var(--german-red) !important;
+    }
+
+    td {
+        color: #ffffff !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    tr:hover td {
+        background: #111111 !important;
+    }
+
+    tr:nth-child(even) td {
+        background: #0a0a0a !important;
+    }
+
+    tr:nth-child(even):hover td {
+        background: #111111 !important;
+    }
+
+    /* ===== Forms ===== */
+    input,
+    textarea,
+    select,
+    .form-control,
+    .form-input {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #888 !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus,
+    .form-control:focus,
+    .form-input:focus {
+        border-color: var(--german-red) !important;
+        box-shadow: 0 0 0 3px rgba(221, 0, 0, 0.2) !important;
+    }
+
+    label {
+        color: #ffffff !important;
+    }
+
+    /* ===== Buttons ===== */
+    .btn-primary,
+    .cta-btn,
+    .submit-btn {
+        background: linear-gradient(135deg, #DD0000 0%, #BB0000 100%) !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+
+    .btn-primary:hover,
+    .cta-btn:hover,
+    .submit-btn:hover {
+        background: linear-gradient(135deg, #FF3333 0%, #DD0000 100%) !important;
+        box-shadow: 0 4px 15px rgba(221, 0, 0, 0.4) !important;
+    }
+
+    .btn-secondary,
+    .btn-outline {
+        background: transparent !important;
+        border: 2px solid var(--german-red) !important;
+        color: var(--german-red) !important;
+    }
+
+    .btn-secondary:hover,
+    .btn-outline:hover {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .btn-gold,
+    .btn-accent {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+    }
+
+    /* ===== Stats Section ===== */
+    .stats-section,
+    .stats-wrapper {
+        background: #000000 !important;
+    }
+
+    .stat-number,
+    .stat-value {
+        color: var(--german-gold) !important;
+    }
+
+    .stat-label,
+    .stat-text {
+        color: #ffffff !important;
+    }
+
+    /* ===== Testimonials ===== */
+    .testimonial-card,
+    .testimonial-item {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .testimonial-text,
+    .testimonial-content p {
+        color: #ffffff !important;
+    }
+
+    .testimonial-author,
+    .testimonial-name {
+        color: #ffffff !important;
+    }
+
+    .testimonial-role {
+        color: #888 !important;
+    }
+
+    /* ===== Success Stories ===== */
+    .story-card {
+        background: #0a0a0a !important;
+    }
+
+    .story-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7)) !important;
+    }
+
+    .story-name {
+        color: #ffffff !important;
+    }
+
+    .story-achievement {
+        color: var(--german-gold) !important;
+    }
+
+    .story-description {
+        color: #ffffff !important;
+    }
+
+    /* ===== Team Section ===== */
+    .team-card {
+        background: #0a0a0a !important;
+    }
+
+    .team-info {
+        background: #000000 !important;
+    }
+
+    .team-name {
+        color: #ffffff !important;
+    }
+
+    .team-role {
+        color: var(--german-red) !important;
+    }
+
+    .team-bio {
+        color: #ffffff !important;
+    }
+
+    /* ===== Events Section ===== */
+    .event-date {
+        background: var(--german-red) !important;
+    }
+
+    .event-category {
+        background: rgba(255, 204, 0, 0.2) !important;
+        color: var(--german-gold) !important;
+    }
+
+    .events-intro-content,
+    .events-features {
+        color: #ffffff !important;
+    }
+
+    .event-feature,
+    .events-features span {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== FAQ Section ===== */
+    .faq-item,
+    .accordion-item {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .faq-question,
+    .accordion-header {
+        color: #ffffff !important;
+    }
+
+    .faq-question:hover,
+    .accordion-header:hover {
+        background: #111111 !important;
+    }
+
+    .faq-answer,
+    .accordion-content {
+        color: #ffffff !important;
+        border-top: 1px solid #222 !important;
+    }
+
+    /* ===== CTA Sections ===== */
+    .cta-section {
+        background: linear-gradient(135deg, #DD0000 0%, #990000 100%) !important;
+    }
+
+    .cta-content h2 {
+        color: #ffffff !important;
+    }
+
+    .cta-content p {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact-info-card,
+    .contact-form-wrapper {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .contact-info-item {
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .contact-icon {
+        background: rgba(221, 0, 0, 0.2) !important;
+        color: var(--german-red) !important;
+    }
+
+    .contact-label {
+        color: #cccccc !important;
+    }
+
+    .contact-value,
+    .contact-text {
+        color: #ffffff !important;
+    }
+
+    /* ===== Map Section ===== */
+    .map-wrapper,
+    .google-map {
+        border: 1px solid #222 !important;
+    }
+
+    /* ===== Social Links ===== */
+    .social-link,
+    .social-icon {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #333 !important;
+    }
+
+    .social-link:hover,
+    .social-icon:hover {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+        border-color: var(--german-red) !important;
+    }
+
+    .social-link-large {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+    }
+
+    .social-link-large span {
+        color: #ffffff !important;
+    }
+
+    /* ===== Footer ===== */
+    .footer,
+    footer {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    .footer h3,
+    .footer h4,
+    .footer-title {
+        color: #ffffff !important;
+    }
+
+    .footer p,
+    .footer-text {
+        color: #cccccc !important;
+    }
+
+    .footer a,
+    .footer-link {
+        color: #ffffff !important;
+    }
+
+    .footer a:hover,
+    .footer-link:hover {
+        color: var(--german-gold) !important;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #222 !important;
+        background: #000000 !important;
+    }
+
+    .footer-divider {
+        border-color: #222 !important;
+    }
+
+    /* ===== Quick Links ===== */
+    .quick-links,
+    .links-section {
+        background: #000000 !important;
+    }
+
+    .quick-link-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .quick-link-card:hover {
+        background: #111111 !important;
+        border-color: var(--german-red) !important;
+    }
+
+    .quick-link-card h4 {
+        color: #ffffff !important;
+    }
+
+    .quick-link-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== Certifications Section ===== */
+    .certifications-section {
+        background: #000000 !important;
+    }
+
+    .certification-card,
+    .partner-card {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .certification-card:hover,
+    .partner-card:hover {
+        background: #111111 !important;
+    }
+
+    /* ===== Instagram Section - Simple Dark Styling ===== */
+    .instagram-section,
+    .instagram-videos-section {
+        background: #0a0a0a !important;
+        background-color: #0a0a0a !important;
+    }
+
+    .instagram-section .section-header h2,
+    .instagram-videos-section .section-header h2 {
+        color: #ffffff !important;
+    }
+
+    .instagram-section .section-header p,
+    .instagram-videos-section .section-header p {
+        color: #cccccc !important;
+    }
+
+    .instagram-videos-grid {
+        background: transparent !important;
+    }
+
+    .instagram-video-item {
+        background: #1a1a1a !important;
+        border: 1px solid #333 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .instagram-video-item:hover {
+        border-color: var(--german-red) !important;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .instagram-video-wrapper {
+        background: #1a1a1a !important;
+        border: 1px solid #333 !important;
+    }
+
+    .instagram-follow,
+    .instagram-follow-cta {
+        background: transparent !important;
+    }
+
+    .instagram-follow a,
+    .instagram-follow-cta a {
+        color: #ffffff !important;
+    }
+
+    /* ===== WhatsApp Button ===== */
+    .whatsapp-btn,
+    .whatsapp-float {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4) !important;
+    }
+
+    /* ===== Back to Top Button ===== */
+    .back-to-top {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .back-to-top:hover {
+        background: var(--german-red) !important;
+        border-color: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== Scrollbar ===== */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #000000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+    }
+
+    /* ===== Selection ===== */
+    ::selection {
+        background: var(--german-red);
+        color: #ffffff;
+    }
+
+    /* ===== Loader ===== */
+    .loader,
+    .loading-spinner {
+        background: #000000 !important;
+    }
+
+    /* ===== Toast Notifications ===== */
+    .toast,
+    .notification {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== Modals ===== */
+    .modal-content,
+    .popup-content {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .modal-header,
+    .popup-header {
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .modal-footer,
+    .popup-footer {
+        border-top: 1px solid #222 !important;
+    }
+
+    .modal-close,
+    .popup-close {
+        color: #ffffff !important;
+    }
+
+    .modal-close:hover,
+    .popup-close:hover {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== Breadcrumbs ===== */
+    .breadcrumb {
+        color: #ffffff !important;
+    }
+
+    .breadcrumb a {
+        color: #cccccc !important;
+    }
+
+    .breadcrumb a:hover {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== Lists ===== */
+    ul li,
+    ol li {
+        color: #ffffff;
+    }
+
+    /* ===== Horizontal Rules ===== */
+    hr {
+        border-color: #222 !important;
+    }
+
+    /* ===== Blockquotes ===== */
+    blockquote {
+        border-left: 4px solid var(--german-red) !important;
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== Code Blocks ===== */
+    code, pre {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #222 !important;
+    }
+
+    /* ===== Images - Don't invert ===== */
+    img {
+        filter: none !important;
+    }
+
+    /* Slightly brighten logos on dark backgrounds */
+    .footer img,
+    .partner-logo img,
+    .certification-logo img {
+        filter: brightness(1.1) !important;
+    }
+
+    /* ===== Badges ===== */
+    .badge,
+    .tag {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #333 !important;
+    }
+
+    .badge-primary {
+        background: rgba(221, 0, 0, 0.2) !important;
+        color: var(--german-red) !important;
+    }
+
+    .badge-success {
+        background: rgba(37, 211, 102, 0.2) !important;
+        color: #25D366 !important;
+    }
+
+    /* ===== Progress Bars ===== */
+    .progress,
+    .progress-bar-wrapper {
+        background: #0a0a0a !important;
+    }
+
+    .progress-bar {
+        background: linear-gradient(90deg, var(--german-red), var(--german-gold)) !important;
+    }
+
+    /* ===== Animations - Reduce motion if preferred ===== */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* ===== Print Styles ===== */
+    @media print {
+        body {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+    }
+
+    /* ==========================================================
+       COMPREHENSIVE PAGE-SPECIFIC DARK MODE FIXES
+       ========================================================== */
+
+    /* ===== LANDING PAGE FIXES ===== */
+    
+    /* About section - "Votre partenaire" text must be white */
+    .about-content h2 {
+        color: #ffffff !important;
+    }
+
+    /* Mission cards (3 cards on about section) - black background */
+    .mission-card,
+    .value-card,
+    .why-us-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .mission-card h3,
+    .value-card h3,
+    .why-us-card h3 {
+        color: #ffffff !important;
+    }
+
+    .mission-card p,
+    .value-card p,
+    .why-us-card p {
+        color: #ffffff !important;
+    }
+
+    /* "La Qualité Avant Tout" section - Red cards with white text */
+    .quality-section,
+    .engagements-section,
+    .commitments-section {
+        background: #000000 !important;
+    }
+
+    .quality-card,
+    .engagement-card,
+    .commitment-card {
+        background: var(--german-red) !important;
+        border: none !important;
+    }
+
+    .quality-card .number,
+    .engagement-card .number,
+    .commitment-card .number,
+    .quality-card h3,
+    .engagement-card h3,
+    .commitment-card h3 {
+        color: #000000 !important;
+    }
+
+    .quality-card p,
+    .engagement-card p,
+    .commitment-card p {
+        color: #ffffff !important;
+    }
+
+    /* Quote text - red color */
+    .quote-text,
+    .dream-quote,
+    blockquote.highlight,
+    .about-quote {
+        color: var(--german-red) !important;
+    }
+
+    /* ===== ABOUT PAGE FIXES ===== */
+    
+    /* History section cards - red background */
+    .history-card,
+    .timeline-card,
+    .milestone-card {
+        background: var(--german-red) !important;
+        border: none !important;
+    }
+
+    .history-card h3,
+    .timeline-card h3,
+    .milestone-card h3,
+    .history-card .year,
+    .timeline-card .year,
+    .milestone-card .year {
+        color: #ffffff !important;
+    }
+
+    .history-card p,
+    .timeline-card p,
+    .milestone-card p {
+        color: #ffffff !important;
+    }
+
+    /* Team cards - black description background */
+    .team-card .team-info,
+    .team-card .team-content,
+    .team-member-info {
+        background: #000000 !important;
+    }
+
+    .team-card .team-name,
+    .team-card h3 {
+        color: #ffffff !important;
+    }
+
+    .team-card .team-role {
+        color: var(--german-red) !important;
+    }
+
+    .team-card .team-bio,
+    .team-card p {
+        color: #ffffff !important;
+    }
+
+    /* Success stories cards - black description background */
+    .story-card .story-content,
+    .story-card .story-info,
+    .success-card .card-content {
+        background: #000000 !important;
+    }
+
+    .story-card .story-name,
+    .story-card h3 {
+        color: #ffffff !important;
+    }
+
+    .story-card .story-description,
+    .story-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== COURSES PAGE FIXES ===== */
+    
+    /* Level cards - black background */
+    .level-card,
+    .course-level-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-card h3,
+    .course-level-card h3 {
+        color: #ffffff !important;
+    }
+
+    .level-card p,
+    .course-level-card p {
+        color: #ffffff !important;
+    }
+
+    .level-card .level-badge,
+    .course-level-card .level-badge {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    /* Format cards - "Choisissez le format" section - black background */
+    .format-card,
+    .study-format-card,
+    .course-format-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .format-card h3,
+    .study-format-card h3,
+    .course-format-card h3 {
+        color: #ffffff !important;
+    }
+
+    .format-card p,
+    .study-format-card p,
+    .course-format-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== EXAMS PAGE FIXES ===== */
+    
+    /* Exam cards content - black text for specific labels */
+    .exam-card-new .exam-prep-label,
+    .exam-card-new .price-label,
+    .exam-card-content .prep-text,
+    .exam-card-content .price-from {
+        color: #000000 !important;
+    }
+
+    /* Exam preparation details section */
+    .exam-details,
+    .prep-details {
+        background: #000000 !important;
+    }
+
+    .exam-details span,
+    .prep-details span {
+        color: #ffffff !important;
+    }
+
+    /* ===== CONTACT SECTION/PAGE FIXES ===== */
+    
+    /* Contact form - all black background */
+    .contact-form-wrapper,
+    .contact-form,
+    .form-wrapper {
+        background: #000000 !important;
+    }
+
+    /* Form inputs - black background, white text */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select,
+    .form-wrapper input,
+    .form-wrapper textarea,
+    .form-wrapper select {
+        background: #000000 !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder,
+    .form-wrapper input::placeholder,
+    .form-wrapper textarea::placeholder {
+        color: #cccccc !important;
+    }
+
+    .contact-form label,
+    .form-wrapper label {
+        color: #ffffff !important;
+    }
+
+    /* Contact info section */
+    .contact-info-wrapper,
+    .contact-details-wrapper {
+        background: #000000 !important;
+    }
+
+    .contact-item h4,
+    .contact-detail-item h4 {
+        color: #ffffff !important;
+    }
+
+    .contact-item p,
+    .contact-item a,
+    .contact-detail-item p,
+    .contact-detail-item a {
+        color: #cccccc !important;
+    }
+
+    /* ===== FORMATIONS PAGE FIXES ===== */
+    
+    /* Formation cards - black background */
+    .formation-card,
+    .training-card,
+    .program-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .formation-card h3,
+    .training-card h3,
+    .program-card h3 {
+        color: #ffffff !important;
+    }
+
+    .formation-card p,
+    .training-card p,
+    .program-card p {
+        color: #ffffff !important;
+    }
+
+    .formation-card ul li,
+    .training-card ul li,
+    .program-card ul li {
+        color: #ffffff !important;
+    }
+
+    /* ===== TEST NIVEAU PAGE FIXES ===== */
+    
+    /* Level understanding cards - black background */
+    .niveau-card,
+    .level-info-card,
+    .level-description-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .niveau-card h3,
+    .level-info-card h3,
+    .level-description-card h3 {
+        color: #ffffff !important;
+    }
+
+    .niveau-card p,
+    .level-info-card p,
+    .level-description-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== EVENTS PAGE FIXES ===== */
+    
+    /* All event cards - black background */
+    .event-card,
+    .event-item,
+    .activity-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-card h3,
+    .event-item h3,
+    .activity-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-card p,
+    .event-item p,
+    .activity-card p {
+        color: #ffffff !important;
+    }
+
+    .event-card .event-date,
+    .event-item .event-date {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    /* Event type cards */
+    .event-type-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-type-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-type-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== ADDITIONAL SPECIFIC FIXES ===== */
+
+    /* Level showcase cards (courses page) */
+    .level-showcase-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-showcase-card h3,
+    .level-showcase-card h4 {
+        color: #ffffff !important;
+    }
+
+    .level-showcase-card p,
+    .level-showcase-card li {
+        color: #ffffff !important;
+    }
+
+    .level-showcase-card .format-price {
+        color: #ffffff !important;
+    }
+
+    .level-showcase-card .format-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* Level detail cards (test-niveau page) */
+    .level-card-detail {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-card-detail h3 {
+        color: #ffffff !important;
+    }
+
+    .level-card-detail p,
+    .level-card-detail li {
+        color: #ffffff !important;
+    }
+
+    /* Team member cards */
+    .team-member-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .team-member-card .member-name,
+    .team-member-card h3 {
+        color: #ffffff !important;
+    }
+
+    .team-member-card .member-role {
+        color: var(--german-red) !important;
+    }
+
+    .team-member-card p {
+        color: #ffffff !important;
+    }
+
+    /* Success story cards */
+    .success-story-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .success-story-card .story-name,
+    .success-story-card h3 {
+        color: #ffffff !important;
+    }
+
+    .success-story-card .story-achievement {
+        color: var(--german-gold) !important;
+    }
+
+    .success-story-card p {
+        color: #ffffff !important;
+    }
+
+    /* Certification cards */
+    .certification-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .certification-card h3 {
+        color: #ffffff !important;
+    }
+
+    .certification-card p {
+        color: #ffffff !important;
+    }
+
+    /* Feature cards */
+    .feature-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .feature-card h3 {
+        color: #ffffff !important;
+    }
+
+    .feature-card p {
+        color: #ffffff !important;
+    }
+
+    /* Format cards additional styles */
+    .format-card .format-icon {
+        background: var(--german-red) !important;
+    }
+
+    .format-card .format-icon i {
+        color: #ffffff !important;
+    }
+
+    .format-card .format-price {
+        color: #ffffff !important;
+    }
+
+    .format-card .format-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    .format-card.exceptional-format {
+        background: #000000 !important;
+        border: 2px solid var(--german-gold) !important;
+    }
+
+    /* Course formats section */
+    .course-formats-section {
+        background: #000000 !important;
+    }
+
+    /* ===== GLOBAL CARD OVERRIDES ===== */
+    
+    /* Ensure ALL cards have proper dark styling */
+    [class*="-card"],
+    [class*="Card"] {
+        background-color: #000000 !important;
+    }
+
+    [class*="-card"] h3,
+    [class*="Card"] h3,
+    [class*="-card"] h4,
+    [class*="Card"] h4 {
+        color: #ffffff !important;
+    }
+
+    [class*="-card"] p,
+    [class*="Card"] p {
+        color: #ffffff !important;
+    }
+
+    /* White backgrounds override - force to black */
+    .bg-white,
+    .bg-light,
+    [style*="background: white"],
+    [style*="background-color: white"],
+    [style*="background: #fff"],
+    [style*="background-color: #fff"],
+    [style*="background: #ffffff"],
+    [style*="background-color: #ffffff"] {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    /* ==========================================================
+       ADDITIONAL COMPREHENSIVE DARK MODE FIXES
+       ========================================================== */
+
+    /* ===== CONTACT PAGE COMPLETE FIX ===== */
+    
+    /* Contact page section */
+    .contact-page-section,
+    .contact-section {
+        background: #000000 !important;
+    }
+
+    .contact-page-grid {
+        background: #000000 !important;
+    }
+
+    /* Contact info page sidebar */
+    .contact-info-page {
+        background: #000000 !important;
+    }
+
+    .contact-info-page h2 {
+        color: #ffffff !important;
+    }
+
+    .contact-info-page p {
+        color: #ffffff !important;
+    }
+
+    /* Contact cards */
+    .contact-card {
+        background: #000000 !important;
+    }
+
+    .contact-card-icon {
+        background: var(--german-red) !important;
+    }
+
+    .contact-card-icon i {
+        color: #ffffff !important;
+    }
+
+    .contact-card-content h3 {
+        color: #ffffff !important;
+    }
+
+    .contact-card-content p,
+    .contact-card-content a {
+        color: #ffffff !important;
+    }
+
+    .contact-card-content a:hover {
+        color: var(--german-gold) !important;
+    }
+
+    /* Contact form page */
+    .contact-form-page {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .form-header h2 {
+        color: #ffffff !important;
+    }
+
+    .form-header p {
+        color: #ffffff !important;
+    }
+
+    .form-group label {
+        color: #ffffff !important;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #aaaaaa !important;
+    }
+
+    .form-group select option {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    /* Social section on contact page */
+    .social-section h3 {
+        color: #ffffff !important;
+    }
+
+    .social-links-large {
+        background: transparent !important;
+    }
+
+    .social-link-large {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .social-link-large i,
+    .social-link-large span {
+        color: #ffffff !important;
+    }
+
+    /* Map section */
+    .map-section-full {
+        background: #000000 !important;
+    }
+
+    /* ===== EXAMS PAGE COMPLETE FIX ===== */
+    
+    /* Exam cards section */
+    .exams-cards-section {
+        background: #000000 !important;
+    }
+
+    .exams-cards-grid {
+        background: transparent !important;
+    }
+
+    /* Exam card new styling */
+    .exam-card-new {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .exam-card-new:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .exam-card-logo {
+        background: #0a0a0a !important;
+    }
+
+    .exam-card-content {
+        background: #000000 !important;
+    }
+
+    .exam-card-content h3 {
+        color: #ffffff !important;
+    }
+
+    .exam-card-subtitle {
+        color: #cccccc !important;
+    }
+
+    .exam-card-description {
+        color: #ffffff !important;
+    }
+
+    .exam-card-description strong {
+        color: #ffffff !important;
+    }
+
+    /* Exam features list */
+    .exam-card-features {
+        background: transparent !important;
+    }
+
+    .exam-card-features li {
+        color: #ffffff !important;
+    }
+
+    .exam-card-features li i {
+        color: var(--german-gold) !important;
+    }
+
+    .exam-card-features li strong {
+        color: #ffffff !important;
+    }
+
+    /* Exam pricing - KEEP TEXT WHITE (user clarified) */
+    .exam-pricing {
+        background: transparent !important;
+    }
+
+    .price-label {
+        color: #ffffff !important;
+    }
+
+    .price-value {
+        color: #ffffff !important;
+    }
+
+    .price-value strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== FORMATIONS PAGE COMPLETE FIX ===== */
+    
+    /* Formation types section */
+    .formation-types-section {
+        background: #000000 !important;
+    }
+
+    .formation-grid {
+        background: transparent !important;
+    }
+
+    /* Formation card styling */
+    .formation-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+        overflow: hidden;
+    }
+
+    .formation-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .formation-image {
+        position: relative;
+    }
+
+    .formation-badge {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .formation-content {
+        background: #000000 !important;
+    }
+
+    .formation-content h3 {
+        color: #ffffff !important;
+    }
+
+    .formation-content p {
+        color: #ffffff !important;
+    }
+
+    .formation-features li {
+        color: #ffffff !important;
+    }
+
+    .formation-features li i {
+        color: var(--german-gold) !important;
+    }
+
+    .formation-price {
+        color: #ffffff !important;
+    }
+
+    .formation-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* Specialized formations section */
+    .specialized-formations {
+        background: #000000 !important;
+    }
+
+    .specialized-grid {
+        background: transparent !important;
+    }
+
+    /* Specialized cards */
+    .specialized-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .specialized-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .specialized-icon {
+        background: var(--german-red) !important;
+    }
+
+    .specialized-icon i {
+        color: #ffffff !important;
+    }
+
+    .specialized-card h3 {
+        color: #ffffff !important;
+    }
+
+    .specialized-card p {
+        color: #ffffff !important;
+    }
+
+    .specialized-card ul li {
+        color: #ffffff !important;
+    }
+
+    .specialized-price {
+        color: #ffffff !important;
+    }
+
+    .specialized-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== TEST NIVEAU PAGE COMPLETE FIX ===== */
+    
+    /* Levels section */
+    .levels-section,
+    .niveau-section {
+        background: #000000 !important;
+    }
+
+    .levels-grid {
+        background: transparent !important;
+    }
+
+    /* Level detail cards */
+    .level-card-detail {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-card-detail:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .level-card-detail .level-badge,
+    .level-card-detail .level-tag {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .level-card-detail h3 {
+        color: #ffffff !important;
+    }
+
+    .level-card-detail p {
+        color: #ffffff !important;
+    }
+
+    .level-card-detail ul li {
+        color: #ffffff !important;
+    }
+
+    /* Test intro section */
+    .test-intro-section {
+        background: #000000 !important;
+    }
+
+    .test-intro-content h2 {
+        color: #ffffff !important;
+    }
+
+    .test-intro-content p {
+        color: #ffffff !important;
+    }
+
+    .test-features li {
+        color: #ffffff !important;
+    }
+
+    /* ===== EVENTS PAGE COMPLETE FIX ===== */
+    
+    /* Events sections */
+    .events-page-section,
+    .events-intro-section {
+        background: #000000 !important;
+    }
+
+    .events-intro-content {
+        background: transparent !important;
+    }
+
+    /* Event type cards */
+    .event-types-section {
+        background: #000000 !important;
+    }
+
+    .event-types-grid {
+        background: transparent !important;
+    }
+
+    .event-type-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-type-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .event-type-icon {
+        background: var(--german-red) !important;
+    }
+
+    .event-type-icon i {
+        color: #ffffff !important;
+    }
+
+    .event-type-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-type-card p {
+        color: #ffffff !important;
+    }
+
+    /* Upcoming events section */
+    .upcoming-events-section {
+        background: #000000 !important;
+    }
+
+    .upcoming-events-grid {
+        background: transparent !important;
+    }
+
+    /* Event cards */
+    .event-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .event-image {
+        position: relative;
+    }
+
+    .event-date {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .event-content {
+        background: #000000 !important;
+    }
+
+    .event-content h3 {
+        color: #ffffff !important;
+    }
+
+    .event-content p {
+        color: #ffffff !important;
+    }
+
+    .event-meta {
+        color: #cccccc !important;
+    }
+
+    .event-meta i {
+        color: var(--german-gold) !important;
+    }
+
+    /* Events videos section */
+    .events-videos-section {
+        background: #000000 !important;
+    }
+
+    /* ===== TEAM PAGE COMPLETE FIX ===== */
+    
+    /* Team section */
+    .team-page-section {
+        background: #000000 !important;
+    }
+
+    .team-grid {
+        background: transparent !important;
+    }
+
+    /* Team member cards */
+    .team-member-card,
+    .team-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+        overflow: hidden;
+    }
+
+    .team-member-card:hover,
+    .team-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .team-photo,
+    .team-image {
+        position: relative;
+    }
+
+    .team-info,
+    .team-content,
+    .member-info {
+        background: #000000 !important;
+    }
+
+    .team-name,
+    .member-name,
+    .team-card h3 {
+        color: #ffffff !important;
+    }
+
+    .team-role,
+    .member-role {
+        color: var(--german-red) !important;
+    }
+
+    .team-bio,
+    .member-bio,
+    .team-card p {
+        color: #ffffff !important;
+    }
+
+    .team-social a {
+        color: #ffffff !important;
+    }
+
+    .team-social a:hover {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== SUCCESS STORIES PAGE COMPLETE FIX ===== */
+    
+    /* Success stories section */
+    .success-stories-page-section {
+        background: #000000 !important;
+    }
+
+    .stories-grid {
+        background: transparent !important;
+    }
+
+    /* Story cards */
+    .story-card,
+    .success-story-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+        overflow: hidden;
+    }
+
+    .story-card:hover,
+    .success-story-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .story-image {
+        position: relative;
+    }
+
+    .story-content,
+    .story-info {
+        background: #000000 !important;
+    }
+
+    .story-name,
+    .story-card h3 {
+        color: #ffffff !important;
+    }
+
+    .story-achievement {
+        color: var(--german-gold) !important;
+    }
+
+    .story-description,
+    .story-card p {
+        color: #ffffff !important;
+    }
+
+    .story-quote {
+        color: #cccccc !important;
+        border-left: 3px solid var(--german-red) !important;
+    }
+
+    /* ===== ABOUT PAGE ADDITIONAL FIXES ===== */
+    
+    /* About intro section */
+    .about-intro-section {
+        background: #000000 !important;
+    }
+
+    .about-intro-content h2 {
+        color: #ffffff !important;
+    }
+
+    .about-intro-content p {
+        color: #ffffff !important;
+    }
+
+    /* Mission vision section */
+    .mission-vision-section {
+        background: #000000 !important;
+    }
+
+    .mission-vision-grid {
+        background: transparent !important;
+    }
+
+    .mission-card,
+    .vision-card,
+    .value-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .mission-card:hover,
+    .vision-card:hover,
+    .value-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .mission-icon,
+    .vision-icon,
+    .value-icon {
+        background: var(--german-red) !important;
+    }
+
+    .mission-icon i,
+    .vision-icon i,
+    .value-icon i {
+        color: #ffffff !important;
+    }
+
+    .mission-card h3,
+    .vision-card h3,
+    .value-card h3 {
+        color: #ffffff !important;
+    }
+
+    .mission-card p,
+    .vision-card p,
+    .value-card p {
+        color: #ffffff !important;
+    }
+
+    /* Certifications section */
+    .certifications-section {
+        background: #000000 !important;
+    }
+
+    .certifications-grid {
+        background: transparent !important;
+    }
+
+    .certification-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .certification-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .certification-icon {
+        background: var(--german-red) !important;
+    }
+
+    .certification-icon i {
+        color: #ffffff !important;
+    }
+
+    .certification-card h3 {
+        color: #ffffff !important;
+    }
+
+    .certification-card p {
+        color: #ffffff !important;
+    }
+
+    /* History timeline section */
+    .history-section {
+        background: #000000 !important;
+    }
+
+    .timeline {
+        background: transparent !important;
+    }
+
+    .timeline-item {
+        background: transparent !important;
+    }
+
+    .timeline-marker {
+        background: var(--german-red) !important;
+    }
+
+    .timeline-marker i {
+        color: #ffffff !important;
+    }
+
+    .timeline-content {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .timeline-date {
+        color: var(--german-gold) !important;
+    }
+
+    .timeline-content h3 {
+        color: #ffffff !important;
+    }
+
+    .timeline-content p {
+        color: #ffffff !important;
+    }
+
+    /* ===== COURSES PAGE ADDITIONAL FIXES ===== */
+    
+    /* Courses intro section */
+    .courses-intro-section {
+        background: #000000 !important;
+    }
+
+    .courses-intro-content h2 {
+        color: #ffffff !important;
+    }
+
+    .courses-intro-content p {
+        color: #ffffff !important;
+    }
+
+    /* Level showcase section */
+    .levels-showcase-section {
+        background: #000000 !important;
+    }
+
+    .levels-showcase-grid {
+        background: transparent !important;
+    }
+
+    .level-showcase-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-showcase-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .level-header {
+        background: var(--german-red) !important;
+    }
+
+    .level-header h3 {
+        color: #ffffff !important;
+    }
+
+    .level-body {
+        background: #000000 !important;
+    }
+
+    .level-body p,
+    .level-body li {
+        color: #ffffff !important;
+    }
+
+    .level-price {
+        color: #ffffff !important;
+    }
+
+    .level-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* Course formats section */
+    .course-formats-section {
+        background: #000000 !important;
+    }
+
+    .formats-grid {
+        background: transparent !important;
+    }
+
+    .format-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .format-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .format-icon {
+        background: var(--german-red) !important;
+    }
+
+    .format-icon i {
+        color: #ffffff !important;
+    }
+
+    .format-card h3 {
+        color: #ffffff !important;
+    }
+
+    .format-card p {
+        color: #ffffff !important;
+    }
+
+    .format-card .format-price {
+        color: #ffffff !important;
+    }
+
+    .format-card .format-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== PACKS PAGE FIXES ===== */
+    
+    .packs-section {
+        background: #000000 !important;
+    }
+
+    .packs-grid {
+        background: transparent !important;
+    }
+
+    .pack-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .pack-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .pack-card.featured {
+        border-color: var(--german-gold) !important;
+    }
+
+    .pack-header {
+        background: linear-gradient(135deg, #DD0000 0%, #990000 100%) !important;
+    }
+
+    .pack-header h3 {
+        color: #ffffff !important;
+    }
+
+    .pack-body {
+        background: #000000 !important;
+    }
+
+    .pack-features li {
+        color: #ffffff !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .pack-price {
+        color: #ffffff !important;
+    }
+
+    .pack-price .amount {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== SERVICES PAGE FIXES ===== */
+    
+    .services-page-section {
+        background: #000000 !important;
+    }
+
+    .services-grid {
+        background: transparent !important;
+    }
+
+    .service-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .service-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .service-icon {
+        background: var(--german-red) !important;
+    }
+
+    .service-icon i {
+        color: #ffffff !important;
+    }
+
+    .service-card h3 {
+        color: #ffffff !important;
+    }
+
+    .service-card p {
+        color: #ffffff !important;
+    }
+
+    .service-features li {
+        color: #ffffff !important;
+    }
+
+    /* ===== QUICK LINKS CARDS FIX ===== */
+    
+    .quick-link-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .quick-link-card:hover {
+        border-color: var(--german-red) !important;
+        background: #0a0a0a !important;
+    }
+
+    .quick-link-icon {
+        background: var(--german-red) !important;
+    }
+
+    .quick-link-icon i {
+        color: #ffffff !important;
+    }
+
+    .quick-link-card h3 {
+        color: #ffffff !important;
+    }
+
+    .quick-link-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== ICON CONTAINERS ===== */
+    
+    /* All icon containers with backgrounds */
+    [class*="-icon"]:not(i),
+    [class*="Icon"]:not(i) {
+        background: var(--german-red) !important;
+    }
+
+    [class*="-icon"] i,
+    [class*="Icon"] i {
+        color: #ffffff !important;
+    }
+
+    /* ===== CONTENT WRAPPER BACKGROUNDS ===== */
+    
+    /* All content wrappers */
+    [class*="-content"],
+    [class*="Content"] {
+        background: transparent !important;
+    }
+
+    [class*="-content"] h2,
+    [class*="-content"] h3,
+    [class*="-content"] h4,
+    [class*="Content"] h2,
+    [class*="Content"] h3,
+    [class*="Content"] h4 {
+        color: #ffffff !important;
+    }
+
+    [class*="-content"] p,
+    [class*="Content"] p {
+        color: #ffffff !important;
+    }
+
+    /* ===== ALL GRIDS TRANSPARENT ===== */
+    
+    [class*="-grid"],
+    [class*="Grid"] {
+        background: transparent !important;
+    }
+
+    /* ===== ALL SECTIONS BLACK ===== */
+    
+    [class*="-section"],
+    [class*="Section"] {
+        background: #000000 !important;
+    }
+
+    /* ==========================================================
+       FINAL COMPREHENSIVE DARK MODE FIXES - ALL REMAINING ISSUES
+       ========================================================== */
+
+    /* ===== LANDING PAGE - BLACK BACKGROUND, NO RED, NO ICONS ===== */
+    
+    /* Remove all gradients and red backgrounds from landing page */
+    .courses-section-new {
+        background: #000000 !important;
+        background-color: #000000 !important;
+        background-image: none !important;
+    }
+
+    .courses-section-new::before,
+    .courses-section-new::after {
+        display: none !important;
+    }
+
+    .courses-grid-new {
+        background: transparent !important;
+    }
+
+    /* Course items on landing page - BLACK backgrounds */
+    .course-item {
+        background: #000000 !important;
+        border: 1px solid #333 !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .course-item::before {
+        display: none !important;
+    }
+
+    .course-item:hover {
+        border-color: var(--german-gold) !important;
+        box-shadow: 0 10px 30px rgba(255, 204, 0, 0.2) !important;
+    }
+
+    .course-item.popular {
+        border: 2px solid var(--german-gold) !important;
+        background: #000000 !important;
+    }
+
+    .course-item.popular::before {
+        display: none !important;
+        background: none !important;
+    }
+
+    .course-level-circle {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .level-text {
+        color: #ffffff !important;
+    }
+
+    .level-ring {
+        border-color: rgba(221, 0, 0, 0.3) !important;
+    }
+
+    .course-info {
+        background: transparent !important;
+    }
+
+    .course-info h3 {
+        color: #ffffff !important;
+    }
+
+    .course-info p {
+        color: #ffffff !important;
+    }
+
+    .course-meta {
+        color: #cccccc !important;
+    }
+
+    .course-meta span {
+        color: #cccccc !important;
+    }
+
+    .course-price {
+        color: var(--german-gold) !important;
+    }
+
+    .course-price small {
+        color: #cccccc !important;
+    }
+
+    .course-cta {
+        color: var(--german-red) !important;
+        border: 1px solid var(--german-red) !important;
+    }
+
+    .course-cta:hover {
+        color: #ffffff !important;
+        background: var(--german-red) !important;
+    }
+
+    /* Popular card button - GOLD by default */
+    .course-item.popular .course-cta {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+        border: none !important;
+    }
+
+    .course-item.popular .course-cta:hover {
+        background: #e6b800 !important;
+        color: #000000 !important;
+    }
+
+    .popular-tag {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+    }
+
+    /* ===== EXAM CARDS ON LANDING PAGE - BLACK BACKGROUNDS ===== */
+    
+    .exams-grid .exam-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .exams-grid .exam-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .exam-logo {
+        background: #0a0a0a !important;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .exam-card h3 {
+        color: #ffffff !important;
+    }
+
+    .exam-card p {
+        color: #ffffff !important;
+    }
+
+    .exam-levels span {
+        background: rgba(221, 0, 0, 0.2) !important;
+        color: #ffffff !important;
+        border: 1px solid var(--german-red) !important;
+    }
+
+    /* ===== EVENT PREVIEW CARDS - BLACK BACKGROUNDS ===== */
+    
+    .event-preview-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-preview-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .event-preview-icon {
+        background: var(--german-red) !important;
+    }
+
+    .event-preview-icon i {
+        color: #ffffff !important;
+    }
+
+    .event-preview-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-preview-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== CONTACT SECTION ON LANDING PAGE - FULL FIX ===== */
+    
+    .contact-section {
+        background: #000000 !important;
+    }
+
+    .contact-grid {
+        background: transparent !important;
+    }
+
+    .contact-info {
+        background: transparent !important;
+    }
+
+    .contact-info h2 {
+        color: #ffffff !important;
+    }
+
+    .contact-info p {
+        color: #ffffff !important;
+    }
+
+    .contact-details {
+        background: transparent !important;
+    }
+
+    .contact-item h4 {
+        color: #ffffff !important;
+    }
+
+    .contact-item p,
+    .contact-item a {
+        color: #ffffff !important;
+    }
+
+    .contact-icon {
+        background: var(--german-red) !important;
+    }
+
+    .contact-icon i {
+        color: #ffffff !important;
+    }
+
+    /* Contact form wrapper on landing page */
+    .contact-form-wrapper {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .contact-form h3 {
+        color: #ffffff !important;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea,
+    .contact-form .form-group select {
+        background: #000000 !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .contact-form .form-group input::placeholder,
+    .contact-form .form-group textarea::placeholder {
+        color: #888888 !important;
+    }
+
+    .contact-form select option {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    /* Social links in contact section */
+    .social-links {
+        background: transparent !important;
+    }
+
+    .social-link {
+        background: #0a0a0a !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .social-link:hover {
+        background: var(--german-red) !important;
+        border-color: var(--german-red) !important;
+    }
+
+    /* ===== "LES AVANTAGES DU ABDEUTSCH CENTER" - RED NUMBERS ===== */
+    
+    /* Stats section numbers - RED color */
+    .stat .stat-number,
+    .about-stats .stat-number,
+    .advantage-number,
+    .benefit-number {
+        color: var(--german-red) !important;
+    }
+
+    .stat .stat-label,
+    .about-stats .stat-label {
+        color: #ffffff !important;
+    }
+
+    /* ===== TRUST MESSAGE SECTION - QUOTE WHITE TEXT ===== */
+    
+    .trust-message-section,
+    .trust-message-section-light {
+        background: #000000 !important;
+    }
+
+    .trust-content {
+        background: transparent !important;
+    }
+
+    .trust-content blockquote {
+        background: transparent !important;
+        border-left: 4px solid var(--german-red) !important;
+    }
+
+    .trust-content blockquote p {
+        color: #ffffff !important;
+    }
+
+    .trust-content blockquote strong {
+        color: var(--german-gold) !important;
+    }
+
+    .trust-stats-light,
+    .trust-stats {
+        background: transparent !important;
+    }
+
+    .trust-stat {
+        background: transparent !important;
+    }
+
+    .trust-number-light,
+    .trust-number {
+        color: var(--german-red) !important;
+    }
+
+    .trust-label-light,
+    .trust-label {
+        color: #ffffff !important;
+    }
+
+    /* ===== COURSES PAGE - LEVEL SHOWCASE CARDS - BLACK BG ===== */
+    
+    .course-levels-section {
+        background: #000000 !important;
+    }
+
+    .levels-showcase {
+        background: transparent !important;
+    }
+
+    .level-showcase-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .level-showcase-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .level-badge-large {
+        /* Keep badge colors as they define the level - no changes needed */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .level-info {
+        background: transparent !important;
+    }
+
+    .level-info h3 {
+        color: #ffffff !important;
+    }
+
+    /* Mode toggle buttons */
+    .mode-toggle {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .mode-btn {
+        background: transparent !important;
+        color: #ffffff !important;
+    }
+
+    .mode-btn.active {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .mode-btn:hover:not(.active) {
+        background: #111111 !important;
+    }
+
+    /* C1 info boxes - BLACK background */
+    .c1-info-box {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .c1-info-box h4 {
+        color: #ffffff !important;
+    }
+
+    .c1-info-box h4 i {
+        color: var(--german-red) !important;
+    }
+
+    .c1-info-box p {
+        color: #ffffff !important;
+    }
+
+    /* Level details grid */
+    .level-details-grid {
+        background: transparent !important;
+    }
+
+    .detail-item {
+        color: #ffffff !important;
+    }
+
+    .detail-item i {
+        color: var(--german-red) !important;
+    }
+
+    .detail-item span {
+        color: #ffffff !important;
+    }
+
+    /* Format price in level cards */
+    .level-showcase-card .format-price,
+    .mode-content .format-price {
+        background: rgba(221, 0, 0, 0.2) !important;
+        color: #ffffff !important;
+    }
+
+    .level-showcase-card .format-price strong,
+    .mode-content .format-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== EXAMS PAGE - "PRÉPARATION INTENSIVE" WHITE TEXT ===== */
+    
+    .exam-pricing .price-label {
+        color: #ffffff !important;
+    }
+
+    .exam-pricing .price-value {
+        color: #ffffff !important;
+    }
+
+    .exam-pricing .price-value strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== PACKS PAGE - RESERVATION FORM FIX ===== */
+    
+    .pack-contact-section {
+        background: #000000 !important;
+    }
+
+    .pack-contact-grid {
+        background: transparent !important;
+    }
+
+    .pack-contact-info {
+        background: transparent !important;
+    }
+
+    .pack-contact-info h2 {
+        color: #ffffff !important;
+    }
+
+    .pack-contact-info p {
+        color: #ffffff !important;
+    }
+
+    .pack-contact-form {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .pack-contact-form h3 {
+        color: #ffffff !important;
+    }
+
+    .pack-contact-form label {
+        color: #ffffff !important;
+    }
+
+    .pack-contact-form input,
+    .pack-contact-form textarea {
+        background: #000000 !important;
+        border: 1px solid #333 !important;
+        color: #ffffff !important;
+    }
+
+    .pack-contact-form input::placeholder,
+    .pack-contact-form textarea::placeholder {
+        color: #888888 !important;
+    }
+
+    /* ===== FORMATIONS PAGE - À PARTIR DE BLACK TEXT FIX ===== */
+    /* Note: User wants "À partir de" to be BLACK - this means in LIGHT MODE */
+    /* In dark mode, we keep it visible (white) */
+    
+    .formation-price {
+        color: #ffffff !important;
+    }
+
+    .formation-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    .specialized-price {
+        color: #ffffff !important;
+    }
+
+    .specialized-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== FORMATION CARDS - BLACK BACKGROUNDS ===== */
+    
+    .formation-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .formation-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .formation-content {
+        background: #000000 !important;
+    }
+
+    .formation-content h3 {
+        color: #ffffff !important;
+    }
+
+    .formation-content p {
+        color: #ffffff !important;
+    }
+
+    .formation-features {
+        background: transparent !important;
+    }
+
+    .formation-features li {
+        color: #ffffff !important;
+    }
+
+    .formation-features li i {
+        color: var(--german-gold) !important;
+    }
+
+    .formation-badge {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    /* Specialized cards */
+    .specialized-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .specialized-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .specialized-icon {
+        background: var(--german-red) !important;
+    }
+
+    .specialized-icon i {
+        color: #ffffff !important;
+    }
+
+    .specialized-card h3 {
+        color: #ffffff !important;
+    }
+
+    .specialized-card p {
+        color: #ffffff !important;
+    }
+
+    .specialized-card ul {
+        background: transparent !important;
+    }
+
+    .specialized-card ul li {
+        color: #ffffff !important;
+    }
+
+    /* ===== SCHEDULE CARD FIX ===== */
+    
+    .schedule-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .schedule-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .schedule-card h3,
+    .schedule-card h4 {
+        color: #ffffff !important;
+    }
+
+    .schedule-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== PARTNERS SECTION FIX ===== */
+    
+    .partners-section {
+        background: #000000 !important;
+    }
+
+    .partners-grid {
+        background: transparent !important;
+    }
+
+    .partner-logo {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .partner-logo:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    /* ===== SECTION HEADERS - WHITE TEXT ===== */
+    
+    .section-header h2 {
+        color: #ffffff !important;
+    }
+
+    .section-header p {
+        color: #ffffff !important;
+    }
+
+    .section-header.light h2 {
+        color: #ffffff !important;
+    }
+
+    .section-header.light p {
+        color: #ffffff !important;
+    }
+
+    /* ===== BUTTONS TEXT COLOR FIX ===== */
+    /* Landing page section buttons - BLACK text on light buttons */
+    
+    .btn-outline {
+        background: transparent !important;
+        border: 2px solid var(--german-red) !important;
+        color: var(--german-red) !important;
+    }
+
+    .btn-outline:hover {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    /* ===== ABOUT SECTION "VOTRE PARTENAIRE" TEXT FIX ===== */
+    
+    .about-section {
+        background: #000000 !important;
+    }
+
+    .about-grid {
+        background: transparent !important;
+    }
+
+    .about-image {
+        background: transparent !important;
+    }
+
+    .about-stats {
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .stat {
+        background: transparent !important;
+    }
+
+    .stat-number {
+        color: var(--german-red) !important;
+    }
+
+    .stat-label {
+        color: #ffffff !important;
+    }
+
+    .about-content {
+        background: transparent !important;
+    }
+
+    .about-content h2 {
+        color: #ffffff !important;
+    }
+
+    .about-content p {
+        color: #ffffff !important;
+    }
+
+    .about-content strong {
+        color: #ffffff !important;
+    }
+
+    .about-features {
+        background: transparent !important;
+    }
+
+    .feature {
+        color: #ffffff !important;
+    }
+
+    .feature i {
+        color: var(--german-red) !important;
+    }
+
+    .feature span {
+        color: #ffffff !important;
+    }
+
+    /* ===== GERMAN FLAG LINE ===== */
+    
+    .german-flag-line {
+        background: linear-gradient(to right, #000000 33%, #DD0000 33%, #DD0000 66%, #FFCC00 66%) !important;
+    }
+
+    /* ==========================================================
+       ADDITIONAL FIXES - EVENTS, FORMATIONS, ABOUT PAGES
+       ========================================================== */
+
+    /* ===== EVENTS PAGE - VIDEO SECTION CARDS ===== */
+    
+    /* Event video rows */
+    .events-videos-section {
+        background: #000000 !important;
+    }
+
+    .event-video-row {
+        background: #000000 !important;
+    }
+
+    .event-video-content {
+        background: #000000 !important;
+    }
+
+    .event-video-content h3 {
+        color: #ffffff !important;
+    }
+
+    .event-video-content p {
+        color: #ffffff !important;
+    }
+
+    .event-category {
+        background: rgba(255, 204, 0, 0.2) !important;
+        color: var(--german-gold) !important;
+    }
+
+    .event-features-list {
+        background: transparent !important;
+    }
+
+    .event-features-list span {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-video-embed {
+        background: #0a0a0a !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-video-embed iframe {
+        background: #0a0a0a !important;
+    }
+
+    /* Event type cards */
+    .event-types-section {
+        background: #000000 !important;
+    }
+
+    .event-types-grid {
+        background: transparent !important;
+    }
+
+    .event-type-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .event-type-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .event-type-icon {
+        background: var(--german-red) !important;
+    }
+
+    .event-type-icon i {
+        color: #ffffff !important;
+    }
+
+    .event-type-card h3 {
+        color: #ffffff !important;
+    }
+
+    .event-type-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== FORMATIONS PAGE - SECTION TAGS WHITE/BLACK ===== */
+    
+    /* Section tags should be visible */
+    .section-tag {
+        background: var(--german-gold) !important;
+        color: #000000 !important;
+    }
+
+    /* Formation cards - BLACK backgrounds */
+    .formation-types-section {
+        background: #000000 !important;
+    }
+
+    .formation-grid {
+        background: transparent !important;
+    }
+
+    .formation-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .formation-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .formation-image {
+        background: transparent !important;
+    }
+
+    .formation-badge {
+        background: var(--german-red) !important;
+        color: #ffffff !important;
+    }
+
+    .formation-content {
+        background: #000000 !important;
+    }
+
+    .formation-content h3 {
+        color: #ffffff !important;
+    }
+
+    .formation-content p {
+        color: #ffffff !important;
+    }
+
+    .formation-features {
+        background: transparent !important;
+    }
+
+    .formation-features li {
+        color: #ffffff !important;
+    }
+
+    .formation-features li i {
+        color: var(--german-gold) !important;
+    }
+
+    /* À partir de - BLACK text in formations (visible in dark mode as white) */
+    .formation-price {
+        background: rgba(221, 0, 0, 0.1) !important;
+        color: #ffffff !important;
+    }
+
+    .formation-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* Specialized formations section */
+    .specialized-formations {
+        background: #000000 !important;
+    }
+
+    .specialized-grid {
+        background: transparent !important;
+    }
+
+    .specialized-card {
+        background: #000000 !important;
+        border: 1px solid #222 !important;
+    }
+
+    .specialized-card:hover {
+        border-color: var(--german-red) !important;
+    }
+
+    .specialized-icon {
+        background: var(--german-red) !important;
+    }
+
+    .specialized-icon i {
+        color: #ffffff !important;
+    }
+
+    .specialized-card h3 {
+        color: #ffffff !important;
+    }
+
+    .specialized-card p {
+        color: #ffffff !important;
+    }
+
+    .specialized-card ul {
+        background: transparent !important;
+    }
+
+    .specialized-card ul li {
+        color: #ffffff !important;
+    }
+
+    .specialized-price {
+        background: rgba(221, 0, 0, 0.1) !important;
+        color: #ffffff !important;
+    }
+
+    .specialized-price strong {
+        color: var(--german-gold) !important;
+    }
+
+    /* ===== ABOUT PAGE - WHY US SECTION - RED NUMBERS ===== */
+    
+    .why-us-section {
+        background: #000000 !important;
+    }
+
+    .why-us-grid {
+        background: transparent !important;
+    }
+
+    .why-us-item {
+        background: #000000 !important;
+    }
+
+    /* Numbers should be RED */
+    .why-us-number {
+        color: var(--german-red) !important;
+        opacity: 1 !important;
+    }
+
+    .why-us-item h3 {
+        color: #ffffff !important;
+    }
+
+    .why-us-item p {
+        color: #ffffff !important;
+    }
+
+    /* ===== CERTIFICATION PAGE - CONTACT SECTION FIX ===== */
+    
+    .certifications-section {
+        background: #000000 !important;
+    }
+
+    .certifications-grid,
+    .certs-grid {
+        background: transparent !important;
+    }
+
+    /* Certification cards with visible backgrounds */
+    .cert-card,
+    .certification-card {
+        background: rgba(20, 20, 20, 0.9) !important;
+        border: 1px solid #333 !important;
+    }
+
+    .cert-card:hover,
+    .certification-card:hover {
+        border-color: var(--german-red) !important;
+        background: rgba(30, 30, 30, 0.95) !important;
+    }
+
+    .cert-icon,
+    .certification-icon {
+        background: var(--german-red) !important;
+    }
+
+    .cert-icon i,
+    .certification-icon i {
+        color: #ffffff !important;
+    }
+
+    .cert-card h3,
+    .certification-card h3 {
+        color: #ffffff !important;
+    }
+
+    .cert-card p,
+    .certification-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== COMMITMENTS SECTION - LA QUALITÉ AVANT TOUT ===== */
+    
+    .commitments-section {
+        background: #000000 !important;
+    }
+
+    .commitments-grid {
+        background: transparent !important;
+    }
+
+    .commitment-card {
+        background: var(--german-red) !important;
+        border: none !important;
+    }
+
+    .commitment-card .commitment-number,
+    .commitment-card .number {
+        color: #000000 !important;
+    }
+
+    .commitment-card h3 {
+        color: #000000 !important;
+    }
+
+    .commitment-card p {
+        color: #ffffff !important;
+    }
+
+    /* ===== TRUST MESSAGE SECTION - QUOTE TEXT WHITE ===== */
+    
+    .trust-message-section,
+    .trust-message-section-light {
+        background: #000000 !important;
+    }
+
+    .trust-content {
+        background: transparent !important;
+    }
+
+    .trust-content blockquote {
+        background: transparent !important;
+        border-left: 4px solid var(--german-red) !important;
+    }
+
+    .trust-content blockquote p {
+        color: #ffffff !important;
+    }
+
+    .trust-content blockquote strong {
+        color: var(--german-gold) !important;
+    }
+
+    .trust-stats,
+    .trust-stats-light {
+        background: transparent !important;
+    }
+
+    .trust-stat {
+        background: transparent !important;
+    }
+
+    .trust-number,
+    .trust-number-light {
+        color: var(--german-red) !important;
+    }
+
+    .trust-label,
+    .trust-label-light {
+        color: #ffffff !important;
+    }
+
+    /* ===== STATS SECTION - NUMBERS RED ===== */
+    
+    .stats-section {
+        background: #000000 !important;
+    }
+
+    .stats-grid {
+        background: transparent !important;
+    }
+
+    .stat-icon {
+        background: var(--german-red) !important;
+    }
+
+    .stat-icon i {
+        color: #ffffff !important;
+    }
+
+    /* Stat numbers should be RED */
+    .stat-item .stat-number {
+        color: var(--german-red) !important;
+    }
+
+    .stat-item .stat-label {
+        color: #ffffff !important;
+    }
+
+    /* ===== SECTION HEADER FIXES ===== */
+    
+    .section-header {
+        background: transparent !important;
+    }
+
+    .section-header h2 {
+        color: #ffffff !important;
+    }
+
+    .section-header p {
+        color: #ffffff !important;
+    }
+
+    .section-header.text-center h2 {
+        color: #ffffff !important;
+    }
+
+    .section-header.text-center p {
+        color: #ffffff !important;
+    }
+
+    /* Section header light variant */
+    .section-header.light h2 {
+        color: #ffffff !important;
+    }
+
+    .section-header.light p {
+        color: #ffffff !important;
+    }
+
+    /* ===== CTA SECTIONS ===== */
+    
+    .cta-section {
+        background: linear-gradient(135deg, #DD0000 0%, #990000 100%) !important;
+    }
+
+    .cta-content h2 {
+        color: #ffffff !important;
+    }
+
+    .cta-content p {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* ===== ALL CARDS FINAL OVERRIDE ===== */
+    
+    /* Force all cards to have black backgrounds */
+    [class*="card"]:not(.popular-tag) {
+        background-color: #000000 !important;
+    }
+
+    [class*="card"] h3 {
+        color: #ffffff !important;
+    }
+
+    [class*="card"] p {
+        color: #ffffff !important;
+    }
+}

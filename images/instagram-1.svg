@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  <rect x="0" y="0" width="400" height="133" fill="#000000"/>
+  <rect x="0" y="133" width="400" height="134" fill="#DD0000"/>
+  <rect x="0" y="267" width="400" height="133" fill="#FFCC00"/>
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Cours A1-A2</text>
+  <circle cx="200" cy="160" r="40" fill="white" opacity="0.3"/>
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="30" fill="white" text-anchor="middle">📚</text>
+</svg>

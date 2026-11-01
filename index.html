@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="#DD0000" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="description" content="Abdeutsch Center - Votre centre d'apprentissage de l'allemand à Khouribga. Cours de langue, préparation aux examens Goethe, telc, TestDaF et accompagnement visa.">
+    <title>Abdeutsch</title>
+    
+    <!-- Preconnect pour améliorer les performances -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="images/Logo_Abdeutsch_PNG-removebg-preview.png" as="image">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/placeholders.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="images/logo.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/logo.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/logo.png" sizes="180x180">
+    <link rel="shortcut icon" href="images/logo.png">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Animated Education Icons Background -->
+    <div class="floating-icons-bg" aria-hidden="true">
+        <i class="fas fa-graduation-cap"></i>
+        <i class="fas fa-certificate"></i>
+        <i class="fas fa-book"></i>
+        <i class="fas fa-award"></i>
+        <i class="fas fa-user-graduate"></i>
+        <i class="fas fa-language"></i>
+        <i class="fas fa-passport"></i>
+        <i class="fas fa-plane"></i>
+        <i class="fas fa-university"></i>
+        <i class="fas fa-medal"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-trophy"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Abdeutsch Center - Accueil"><img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center Logo" class="navbar-logo" width="60" height="60"><span class="logo-text notranslate" translate="no">Abdeutsch Center</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Qui sommes-nous ? <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="team.html">Notre Équipe</a></li>
+                        <li><a href="certification.html">Certification & Légalité</a></li>
+                        <li><a href="success-stories.html">Nos Réussites</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Nos Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses.html">Cours de Langue</a></li>
+                        <li><a href="exams.html">Examens Internationaux</a></li>
+                        <li><a href="packs.html">Nos Packs</a></li>
+                        <li><a href="formations.html">Nos Formations</a></li>
+                        <li><a href="test-niveau.html">Test de Niveau</a></li>
+                    </ul>
+                </li>
+                <li><a href="events.html" class="nav-link">Événements</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="contact.html" class="btn btn-primary">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Hero Slider Section -->
+    <section class="hero-slider" id="accueil" aria-label="Diaporama principal">
+        <div class="animated-bg"></div>
+        
+        <div class="slider-container">
+            <!-- Slide 1 - German Flag Flying Background -->
+            <div class="slide active german-flag-slide">
+                <div class="german-flag-bg">
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-stripe flag-gold"></div>
+                </div>
+                <div class="slide-overlay"></div>
+                
+                <!-- Hero Content Container with Logo and Text -->
+                <div class="hero-content-container">
+                    <div class="hero-logo-wrapper">
+                        <img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center" class="hero-logo-animated">
+                    </div>
+                    <div class="slide-content">
+                        <div class="german-flag-line"></div>
+                        <h1>Bienvenue au Abdeutsch Center!</h1>
+                        <p>Votre partenaire pour construire un avenir solide en Allemagne, depuis l'apprentissage linguistique jusqu'à l'intégration professionnelle.</p>
+                        <div class="slide-buttons">
+                            <a href="services.html" class="btn btn-primary btn-lg">Découvrir nos services</a>
+                            <a href="contact.html" class="btn btn-outline btn-lg">Nous contacter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide german-flag-slide" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1920&q=80');">
+                <div class="german-flag-bg">
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-stripe flag-gold"></div>
+                </div>
+                <div class="slide-overlay"></div>
+                
+                <!-- Hero Content Container with Logo and Text -->
+                <div class="hero-content-container">
+                    <div class="hero-logo-wrapper">
+                        <img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center" class="hero-logo-animated">
+                    </div>
+                    <div class="slide-content">
+                        <div class="german-flag-line"></div>
+                        <h1>Préparez vos examens internationaux avec nous!</h1>
+                        <p>Nous vous préparons efficacement aux examens Goethe, telc et TestDaF pour vos études ou votre carrière en Allemagne.</p>
+                        <div class="slide-buttons">
+                            <a href="exams.html" class="btn btn-primary btn-lg">Préparation aux examens</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide german-flag-slide" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80');">
+                <div class="german-flag-bg">
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-stripe flag-gold"></div>
+                </div>
+                <div class="slide-overlay"></div>
+                
+                <!-- Hero Content Container with Logo and Text -->
+                <div class="hero-content-container">
+                    <div class="hero-logo-wrapper">
+                        <img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center" class="hero-logo-animated">
+                    </div>
+                    <div class="slide-content">
+                        <div class="german-flag-line"></div>
+                        <h1>Rejoignez nos formations professionnelles!</h1>
+                        <p>Choisissez votre spécialité, développez des compétences recherchées et laissez-nous vous accompagner dans chaque étape.</p>
+                        <div class="slide-buttons">
+                            <a href="services.html#formation" class="btn btn-primary btn-lg">Nos Formations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide german-flag-slide" style="background-image: url('https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=1920&q=80');">
+                <div class="german-flag-bg">
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-stripe flag-gold"></div>
+                </div>
+                <div class="slide-overlay"></div>
+                
+                <!-- Hero Content Container with Logo and Text -->
+                <div class="hero-content-container">
+                    <div class="hero-logo-wrapper">
+                        <img src="images/Logo_Abdeutsch_PNG-removebg-preview.png" alt="Abdeutsch Center" class="hero-logo-animated">
+                    </div>
+                    <div class="slide-content">
+                        <div class="german-flag-line"></div>
+                        <h1>Maîtrisez l'allemand!</h1>
+                        <p>Progressez du niveau A1 au C1 grâce à nos programmes structurés, dynamiques et adaptés à tous les niveaux.</p>
+                        <div class="slide-buttons">
+                            <a href="services.html#cours" class="btn btn-primary btn-lg">Nos cours d'allemand</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="#exams" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Nos Examens</h3>
+                    <p>Découvrez les examens que nous proposons</p>
+                </a>
+                <a href="#courses" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Cours de Langue</h3>
+                    <p>Inscrivez-vous à nos cours d'allemand</p>
+                </a>
+                <a href="#events" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Cours de Culture</h3>
+                    <p>Découvrez la culture allemande</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80" alt="Abdeutsch Center">
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">Étudiants</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Qui sommes-nous</span>
+                    <h2>Votre partenaire pour l'apprentissage de l'allemand</h2>
+                    <p><strong>Abdeutsch Center</strong> est un centre d'excellence dédié à l'enseignement de la langue allemande. Nous accompagnons nos étudiants dans leur parcours d'apprentissage, de la préparation linguistique à l'intégration professionnelle en Allemagne.</p>
+                    <p>Notre équipe de professeurs qualifiés et expérimentés vous guide à travers un programme structuré et adapté à vos objectifs, que ce soit pour les études, le travail ou l'immigration.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professeurs natifs certifiés</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Programmes personnalisés</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Certification internationale</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Accompagnement professionnel</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ce que nous offrons</span>
+                <h2>Nos Services</h2>
+                <p>Découvrez notre gamme complète de services pour votre apprentissage de l'allemand</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Cours d'Allemand</h3>
+                    <p>Des cours structurés du niveau A1 au C1, dispensés par des professeurs qualifiés et expérimentés.</p>
+                    <a href="#courses" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Préparation aux Examens</h3>
+                    <p>Préparation intensive aux examens officiels Goethe, TestDaF, et telc pour tous les niveaux.</p>
+                    <a href="#exams" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Accompagnement Visa</h3>
+                    <p>Assistance complète pour vos démarches de visa étudiant ou professionnel pour l'Allemagne.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Formation Professionnelle</h3>
+                    <p>Programmes de formation spécialisés pour les métiers en demande en Allemagne.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Orientation Universitaire</h3>
+                    <p>Conseils et accompagnement pour les admissions dans les universités allemandes.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cours en Ligne</h3>
+                    <p>Apprenez l'allemand depuis chez vous avec nos cours en ligne interactifs et flexibles.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section-new" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Programmes</span>
+                <h2>Cours d'Allemand</h2>
+                <p>Choisissez le niveau qui correspond à vos besoins et objectifs</p>
+            </div>
+            
+            <!-- New Course Grid Design -->
+            <div class="courses-grid-new">
+                <!-- A1 -->
+                <div class="course-item" data-level="a1">
+                    <div class="course-level-circle">
+                        <span class="level-text notranslate" translate="no">A1</span>
+                        <div class="level-ring"></div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Débutant</h3>
+                        <p>Bases de l'allemand, salutations et expressions quotidiennes</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 72h</span>
+                            <span><i class="fas fa-users"></i> 10-18</span>
+                        </div>
+                        <div class="course-price">2500 <small>MAD</small></div>
+                        <a href="contact.html" class="course-cta">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- A2 -->
+                <div class="course-item" data-level="a2">
+                    <div class="course-level-circle">
+                        <span class="level-text notranslate" translate="no">A2</span>
+                        <div class="level-ring"></div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Élémentaire</h3>
+                        <p>Situations de la vie courante et conversations simples</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 144h</span>
+                            <span><i class="fas fa-users"></i> 10-18</span>
+                        </div>
+                        <div class="course-price">4800 <small>MAD</small></div>
+                        <a href="contact.html" class="course-cta">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- B1 - Popular -->
+                <div class="course-item popular" data-level="b1">
+                    <div class="popular-tag"><i class="fas fa-star"></i> Populaire</div>
+                    <div class="course-level-circle">
+                        <span class="level-text notranslate" translate="no">B1</span>
+                        <div class="level-ring"></div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Intermédiaire</h3>
+                        <p>Situations professionnelles et académiques courantes</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 216h</span>
+                            <span><i class="fas fa-users"></i> 10-18</span>
+                        </div>
+                        <div class="course-price">7000 <small>MAD</small></div>
+                        <a href="contact.html" class="course-cta">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- B2 -->
+                <div class="course-item" data-level="b2">
+                    <div class="course-level-circle">
+                        <span class="level-text notranslate" translate="no">B2</span>
+                        <div class="level-ring"></div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Intermédiaire Supérieur</h3>
+                        <p>Préparation aux études universitaires et travail en Allemagne</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 120h</span>
+                            <span><i class="fas fa-users"></i> 10-18</span>
+                        </div>
+                        <div class="course-price">4000 <small>MAD</small></div>
+                        <a href="contact.html" class="course-cta">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- C1 -->
+                <div class="course-item" data-level="c1">
+                    <div class="course-level-circle">
+                        <span class="level-text notranslate" translate="no">C1</span>
+                        <div class="level-ring"></div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Avancé</h3>
+                        <p>Maîtrise complète pour un niveau professionnel</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 240h</span>
+                            <span><i class="fas fa-users"></i> 10-18</span>
+                        </div>
+                        <div class="course-price">6750 <small>MAD</small></div>
+                        <a href="contact.html" class="course-cta">S'inscrire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="courses-cta-bottom">
+                <a href="courses.html" class="btn btn-outline btn-lg">Voir tous les détails <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exams Section -->
+    <section class="exams-section" id="exams">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Certifications</span>
+                <h2>Examens Officiels</h2>
+                <p>Nous vous préparons efficacement aux examens de certification en allemand reconnus internationalement</p>
+            </div>
+            <div class="exams-grid">
+                <div class="exam-card">
+                    <div class="exam-logo">
+                        <img src="images/Goethe.svg" alt="Goethe Institut">
+                    </div>
+                    <h3>Goethe-Zertifikat</h3>
+                    <p>Le certificat le plus reconnu internationalement pour la langue allemande.</p>
+                    <div class="exam-levels">
+                        <span>A1</span>
+                        <span>A2</span>
+                        <span>B1</span>
+                        <span>B2</span>
+                        <span>C1</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Contactez-nous</a>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-logo">
+                        <img src="images/telc.png" alt="telc">
+                    </div>
+                    <h3>telc Deutsch</h3>
+                    <p>Certificats reconnus pour l'immigration et le travail en Allemagne.</p>
+                    <div class="exam-levels">
+                        <span>A1</span>
+                        <span>A2</span>
+                        <span>B1</span>
+                        <span>B2</span>
+                        <span>C1</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Contactez-nous</a>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-logo">
+                        <img src="images/TestDaf.png" alt="TestDaF">
+                    </div>
+                    <h3>TestDaF</h3>
+                    <p>L'examen requis pour l'admission dans les universités allemandes.</p>
+                    <div class="exam-levels">
+                        <span>TDN 3</span>
+                        <span>TDN 4</span>
+                        <span>TDN 5</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Preview Section -->
+    <section class="events-preview-section" id="events">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Activités</span>
+                <h2>Nos Événements</h2>
+                <p>Découvrez nos événements, ateliers et workshops pour enrichir votre apprentissage</p>
+            </div>
+            <div class="events-preview-grid">
+                <div class="event-preview-card">
+                    <div class="event-preview-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>Journées Portes Ouvertes</h3>
+                    <p>Visitez notre centre et rencontrez nos professeurs</p>
+                </div>
+                <div class="event-preview-card">
+                    <div class="event-preview-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Workshops & Ateliers</h3>
+                    <p>Conseils pratiques pour vivre et travailler en Allemagne</p>
+                </div>
+                <div class="event-preview-card">
+                    <div class="event-preview-icon">
+                        <i class="fas fa-beer-mug-empty"></i>
+                    </div>
+                    <h3>Soirées Culturelles</h3>
+                    <p>Découvrez la culture et les traditions allemandes</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="events.html" class="btn btn-primary">Voir tous les événements <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2>Ce que disent nos étudiants</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Grâce au Abdeutsch Center, j'ai obtenu mon certificat B2 et j'ai pu réaliser mon rêve d'étudier en Allemagne."</p>
+                    <div class="testimonial-author">
+                        <img src="./images/ines.jpg" alt="Sarah M.">
+                        <div>
+                            <h4>Ines Belhaj</h4>
+                            <span>Étudiante en Médecine, Berlin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"L'accompagnement pour le visa et les démarches administratives a été incroyable. Je recommande vivement ce centre à tous!"</p>
+                    <div class="testimonial-author">
+                        <img src="./images/adil.jpg" alt="Ahmed K.">
+                        <div>
+                            <h4>Adil Mounir</h4>
+                            <span>Ingénieur, Munich</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Des cours de qualité, une ambiance conviviale et des résultats garantis. J'ai progressé très rapidement du niveau A1 au B1."</p>
+                    <div class="testimonial-author">
+                        <img src="./images/leila.jpg" alt="Fatima Z.">
+                        <div>
+                            <h4>Leila Maarouf</h4>
+                            <span>Infirmière, Hambourg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Contactez-nous</h2>
+                    <p>Vous avez des questions? N'hésitez pas à nous contacter. Notre équipe est là pour vous aider.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adresse</h4>
+                                <a href="https://maps.app.goo.gl/kVRK6V2NgpuHk8GN9" target="_blank"><p>Voir sur Google Maps</p></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p><a href="tel:+212772558126">+212 7 72 55 81 26</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:Contact@abdeutschzentrum.de">Contact@abdeutschzentrum.de</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:Contact@abdeutschzentrum.de">abdeutschzentrum@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lun - Sam: 10:00 - 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Abdeutschcoach/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/abd.eutsch/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/abdeutsch-zentrum-8a59a13a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.link/r6rnlq" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Envoyez-nous un message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Votre email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Votre téléphone">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="">Choisir un sujet</option>
+                                <option value="inscription">Inscription aux cours</option>
+                                <option value="examen">Information sur les examens</option>
+                                <option value="visa">Accompagnement visa</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-section" id="instagram">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Suivez-nous</span>
+                <h2>Notre Actualité sur Instagram</h2>
+                <p>Découvrez nos dernières publications, photos et vidéos</p>
+            </div>
+            <div class="instagram-videos-grid">
+                <!-- Video 1 - Instagram -->
+                <div class="instagram-video-item">
+                    <iframe 
+                        src="https://www.instagram.com/p/DN8i-qSDKW4/embed" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true"
+                        allow="autoplay; encrypted-media"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <!-- Video 2 - Local (Centre) -->
+                <div class="instagram-video-item">
+                    <video controls playsinline style="width: 100%; height: 500px; object-fit: contain; background: #000; border-radius: 12px; cursor: pointer;">
+                        <source src="images/2025-06-10-184532498 (1).mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+                <!-- Video 3 - Instagram -->
+                <div class="instagram-video-item">
+                    <iframe 
+                        src="https://www.instagram.com/p/DCM3zhcvc_j/embed" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true"
+                        allow="autoplay; encrypted-media"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="instagram-follow">
+                <a href="https://www.instagram.com/abd.eutsch/" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="fab fa-instagram"></i> Suivre @abd.eutsch
+                </a>
+                <a href="https://www.facebook.com/Abdeutschcoach/" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="fab fa-facebook-f"></i> Suivre sur Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Emplacement</span>
+                <h2>Venez Nous Rendre Visite</h2>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.5!2d-6.9063!3d32.8811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda4272e395d7a53%3A0x79615c70ef400434!2sAbdeutsch%20Zentrum!5e0!3m2!1sfr!2sma!4v1706000000000" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map-info-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Abdeutsch Zentrum</h3>
+                <p>2éme étage, Résidence Alhamd, N29 Rue Moulay Driss, Khouribga</p>
+                <a href="https://maps.app.goo.gl/kVRK6V2NgpuHk8GN9" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-directions"></i> Obtenir l'itinéraire
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <h3 class="footer-title">Abdeutsch Center</h3>
+                        <p>Votre partenaire de confiance pour l'apprentissage de l'allemand et l'accompagnement vers une carrière en Allemagne.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Liens Rapides</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="services.html">Nos Services</a></li>
+                            <li><a href="courses.html">Nos Cours</a></li>
+                            <li><a href="exams.html">Examens</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li><a href="courses.html">Cours d'Allemand</a></li>
+                            <li><a href="exams.html">Préparation Examens</a></li>
+                            <li><a href="packs.html">Accompagnement Visa</a></li>
+                            <li><a href="formations.html">Formation Professionnelle</a></li>
+                            <li><a href="contact.html">Orientation Universitaire</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="tel:+212772558126"><i class="fas fa-phone"></i> +212 7 72 55 81 26</a></li>
+                            <li><a href="mailto:Contact@abdeutschzentrum.de"><i class="fas fa-envelope"></i> Contact@abdeutschzentrum.de</a></li>
+                            <li><a href="mailto:abdeutschzentrum@gmail.com"><i class="fas fa-envelope"></i> abdeutschzentrum@gmail.com</a></li>
+                            <li><a href="https://maps.app.goo.gl/kVRK6V2NgpuHk8GN9" target="_blank"><i class="fas fa-map-marker-alt"></i> Voir sur Maps</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/Abdeutschcoach/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/abd.eutsch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.link/r6rnlq" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-bottom-right">
+                    <p>Copyright 2026 © Abdeutsch Center. Tous droits réservés.</p>
+                    <span class="footer-separator">|</span>
+                    <a href="#">Mentions légales</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button (Left) -->
+    <a href="https://wa.link/r6rnlq" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Language Translator Button (Right) -->
+    <div class="translate-float" id="translateBtn">
+        <div class="translate-btn">
+            <i class="fas fa-globe"></i>
+        </div>
+        <div class="translate-menu" id="translateMenu">
+            <a href="#" class="translate-option" data-lang="fr" translate="no">
+                <span class="lang-abbr">FR</span> Français
+            </a>
+            <a href="#" class="translate-option" data-lang="en" translate="no">
+                <span class="lang-abbr">EN</span> English
+            </a>
+            <a href="#" class="translate-option" data-lang="de" translate="no">
+                <span class="lang-abbr">DE</span> Deutsch
+            </a>
+            <a href="#" class="translate-option" data-lang="ar" translate="no">
+                <span class="lang-abbr">AR</span> العربية
+            </a>
+        </div>
+    </div>
+
+    <!-- Google Translate Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'fr,en,de,ar',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+
+    <!-- JavaScript Files -->
+    <script src="js/mobile.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+
