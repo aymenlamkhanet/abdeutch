@@ -37,12 +37,14 @@ function initSlider() {
         sliderDots.appendChild(dot);
     });
 
-    // Start auto-slide
-    startSlideInterval();
+    // Keep the single video hero active; there is nothing to rotate.
+    if (slides.length > 1) {
+        startSlideInterval();
+    }
 }
 
 function goToSlide(index) {
-    if (!slides.length || !sliderDots) return;
+    if (!slides.length || !sliderDots || slides.length <= 1) return;
     
     slides[currentSlide].classList.remove('active');
     sliderDots.children[currentSlide].classList.remove('active');
