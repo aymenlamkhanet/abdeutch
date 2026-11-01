@@ -5425,15 +5425,38 @@ img:not([loading="lazy"]) {
     visibility: visible !important;
 }
 
+.hero-video-stage .hero-content-container,
+.hero-video-stage .hero-foreground,
 .hero-video-stage .hero-logo-wrapper,
 .hero-video-stage .hero-logo-animated,
 .hero-video-stage .slide-content,
 .hero-video-stage .slide-content h1,
 .hero-video-stage .slide-content p,
-.hero-video-stage .slide-buttons {
+.hero-video-stage .slide-buttons,
+.hero-video-stage .slide-buttons a {
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
     transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+.hero-video-stage .hero-content-container,
+.hero-video-stage .hero-foreground {
+    display: flex !important;
+}
+
+.hero-video-stage .hero-foreground {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.hero-video-stage .slide-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 auto !important;
 }
 
 .hero-video-stage .hero-logo-wrapper {
